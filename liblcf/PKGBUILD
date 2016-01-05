@@ -1,0 +1,35 @@
+# Maintainer: carstene1ns https://aur.archlinux.org/packages/liblcf
+
+pkgname=liblcf
+pkgver=0.4.0
+pkgrel=1
+pkgdesc="Library to handle RPG Maker 2000/2003 and EasyRPG projects"
+arch=('i686' 'x86_64')
+url="https://easy-rpg.org/"
+license=('MIT')
+depends=('gcc-libs' 'expat' 'icu')
+source=("https://easy-rpg.org/downloads/player/liblcf-$pkgver.tar.gz")
+sha256sums=('0cd10d5c1de6bab96fb0fd20484cd467c76b81b64d8e39c0cb52b0af8fc30065')
+
+build () {
+  cd liblcf-$pkgver
+
+  ./configure --prefix=/usr --enable-shared --disable-static
+  make
+}
+
+check() {
+  if [ "$CARCH" == "x86_64" ]; then
+    make -C liblcf-$pkgver check
+  else
+    true
+  fi
+}
+
+package () {
+  cd liblcf-$pkgver
+
+  make DESTDIR="$pkgdir/" install
+  # license
+  install -Dm644 COPYING "$pkgdir"/usr/share/licenses/$pkgname/COPYING
+}
