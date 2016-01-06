@@ -1,0 +1,17 @@
+<services>
+	<service name="download_url">
+		<param name="host">archive.ubuntu.com</param>
+		<param name="protocol">http</param>
+		<param name="path">/ubuntu/pool/universe/libm/libmodplug/libmodplug_0.8.8.4-4.1.dsc</param>
+	</service>
+	<service name="download_url">
+		<param name="host">archive.ubuntu.com</param>
+		<param name="protocol">http</param>
+		<param name="path">/ubuntu/pool/universe/libm/libmodplug/libmodplug_0.8.8.4.orig.tar.gz</param>
+	</service>
+	<service name="download_url">
+		<param name="host">archive.ubuntu.com</param>
+		<param name="protocol">http</param>
+		<param name="path">/ubuntu/pool/universe/libm/libmodplug/libmodplug_0.8.8.4-4.1.diff.gz</param>
+	</service>
+</services>
