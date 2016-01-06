@@ -6,12 +6,14 @@
 System     | Status
 ---------- | ------
 Arch Linux | ✔
-Debian:    | ✘ (does not split package)
-Ubuntu:    | ✘ (same)
+Debian:    | ✔
+Ubuntu:    | ✔
 Fedora:    | ✔
 openSUSE:  | ✔
 
 ## Notes
 
-To work correctly, this needs a copy of the release tarball (liblcf-$version.tar.gz)
-Change version in the other files accordingly!
+To work correctly, this needs two copies of the release tarball
+`liblcf-$version.tar.gz` and `liblcf_$version.orig.tar.gz`
+
+Change version fields in the other files accordingly!

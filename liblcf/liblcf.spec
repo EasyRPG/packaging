@@ -80,3 +80,5 @@ rm %{buildroot}%{_libdir}/liblcf.la
 %{_libdir}/pkgconfig/liblcf.pc
 
 %changelog
+* Mon Jan 4 2016 carstene1ns <dev@ f4ke .de> - 0.4.0-1
+- Initital package
