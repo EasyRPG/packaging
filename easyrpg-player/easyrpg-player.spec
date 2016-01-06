@@ -64,3 +64,5 @@ make %{?_smp_mflags}
 %{_mandir}/man6/*
 
 %changelog
+* Mon Jan 4 2016 carstene1ns <dev@ f4ke .de> - 0.4.0-1
+- created package

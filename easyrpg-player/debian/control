@@ -1,14 +1,14 @@
 Source: easyrpg-player
+Section: games
 Priority: optional
 Maintainer: carstene1ns <dev@ f4ke .de>
-Build-Depends: debhelper (>= 7.0.50~), pkg-config, liblcf-dev, libsdl2-dev, libsdl2-mixer-dev, libpixman-1-dev, libpng12-dev
+Build-Depends: debhelper (>= 9), autotools-dev, pkg-config, liblcf-dev, libsdl2-dev, libsdl2-mixer-dev, libpixman-1-dev, libpng12-dev, libfreetype6-dev, libboost-dev
 Standards-Version: 3.9.6
-Section: games
-Homepage: https://easy-rpg.org
+Homepage: https://easy-rpg.org/
 
 Package: easyrpg-player
-Architecture: x86_64 i586
-Depends: ${misc:Depends}
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: RPG Maker 2000/2003 and EasyRPG game interpreter
  EasyRPG Player is a program that allows to play games created with
  RPG Maker 2000 and 2003. It aims to be a free (as in freedom)
