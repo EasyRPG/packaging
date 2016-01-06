@@ -6,14 +6,16 @@
 System       | Status
 ------------ | ------
 Arch Linux   | ✔
-Debian 8:    | ✘ (can not find liblcf0, package not correctly split)
-Debian 7     | ✘ (additionally does not find sdl libraries)
-Ubuntu 15.10 | ✘ (same)
-Ubuntu 14.04 | ✘ (same)
+Debian 8:    | ✔
+Debian 7     | ✘ (does not find sdl libraries)
+Ubuntu 15.10 | ✘ (same, because it does not build the sdl package)
+Ubuntu 14.04 | ✔
 Fedora       | ✔
 openSUSE     | ✔
 
 ## Notes
 
-To work correctly, this needs a copy of the release tarball (easyrpg-player-$version.tar.gz)
-Change version in the other files accordingly!
+To work correctly, this needs two copies of the release tarball
+`easyrpg-player-$version.tar.gz` and `easyrpg-player_$version.orig.tar.gz`
+
+Change version fileds in the other files accordingly!
