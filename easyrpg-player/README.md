@@ -7,8 +7,8 @@ System       | Status
 ------------ | ------
 Arch Linux   | ✔
 Debian 8:    | ✔
-Debian 7     | ✘ (does not find sdl libraries)
-Ubuntu 15.10 | ✘ (same, because it does not build the sdl package)
+Debian 7     | ✘ (does not find sdl2_mixer libraries, because it does not build them)
+Ubuntu 15.10 | ✔
 Ubuntu 14.04 | ✔
 Fedora       | ✔
 openSUSE     | ✔
