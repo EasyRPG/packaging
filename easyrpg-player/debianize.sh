@@ -29,3 +29,4 @@ sed -i "/$lead/,$ { /$lead/{p; r checksums.txt
         }; d }"  easyrpg-player.dsc
 
 rm checksums.txt
+cp "easyrpg-player-${ORIGVER}.tar.gz" "easyrpg-player_${ORIGVER}.orig.tar.gz"

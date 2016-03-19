@@ -1,3 +1,9 @@
+easyrpg-player (0.4.1-1) unstable; urgency=low
+
+  * Upstream update
+
+ -- carstene1ns <dev@ f4ke .de>  Sat, 19 Mar 2016 03:21:00 +0100
+
 easyrpg-player (0.4.0-1) unstable; urgency=low
  
   * Initial release
