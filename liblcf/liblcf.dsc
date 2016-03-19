@@ -11,10 +11,10 @@ Package-List:
  liblcf deb extra
 Checksums-Sha256:
  038a3c382759a27956338d983043f330afeb71caefc4f5de8966925ebff539fe 488488 liblcf_0.4.1.orig.tar.gz
- 600611174c8a9d433988715ca01252d52518ea70a889ca1f4971438faaa4c7cf 2365 liblcf_0.4.1-1.debian.tar.gz
+ 3568b94ff2adbe23f1cfa2d53bce4035205f23a0248214387d07e7296d11ab24 2406 liblcf_0.4.1-1.debian.tar.gz
 Checksums-Sha1:
  41b2c07c00e337d9609bc748634edc526565d85b 488488 liblcf_0.4.1.orig.tar.gz
- bc9f0245e1d47a6c942f78048b902a8f785e98c2 2365 liblcf_0.4.1-1.debian.tar.gz
+ b92a25ca941fb7791ba32ec91c8486feb208d500 2406 liblcf_0.4.1-1.debian.tar.gz
 Files:
  f26147fb3467d89edf7b639ab2f3fce9 488488 liblcf_0.4.1.orig.tar.gz
- d7886f10db2d88706ce192fb284307b6 2365 liblcf_0.4.1-1.debian.tar.gz
+ 77a65ada65d41571ae3a8ff6957d96d7 2406 liblcf_0.4.1-1.debian.tar.gz

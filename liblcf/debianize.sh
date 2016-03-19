@@ -29,3 +29,4 @@ sed -i "/$lead/,$ { /$lead/{p; r checksums.txt
         }; d }"  liblcf.dsc
 
 rm checksums.txt
+cp "liblcf-${ORIGVER}.tar.gz" "liblcf_${ORIGVER}.orig.tar.gz"
