@@ -1,7 +1,7 @@
 
 Name:           easyrpg-player
 Version:        0.4.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Game interpreter to play RPG Maker 2000, 2003 and EasyRPG games
 
 Group:          Games
@@ -64,6 +64,9 @@ make %{?_smp_mflags}
 %{_mandir}/man6/*
 
 %changelog
+* Sun Mar 20 2016 carstene1ns <dev@ f4ke .de> - 0.4.1-2
+- Checksum Update
+
 * Sat Mar 19 2016 carstene1ns <dev@ f4ke .de> - 0.4.1-1
 - Upstream Update
 

@@ -1,3 +1,9 @@
+easyrpg-player (0.4.1-2) unstable; urgency=low
+
+  * Checksum update
+
+ -- carstene1ns <dev@ f4ke .de>  Sun, 20 Mar 2016 15:48:00 +0100
+
 easyrpg-player (0.4.1-1) unstable; urgency=low
 
   * Upstream update
