@@ -4,12 +4,12 @@
 ## Status
 
 System     | Status
----------- | ------
+-----------| ------
 Arch Linux | ✔
-Debian:    | ✔
-Ubuntu:    | ✔
-Fedora:    | ✔
-openSUSE:  | ✔
+Debian     | ✔
+Ubuntu     | ✔
+Fedora     | ✔
+openSUSE   | ✔
 
 ## Notes
 

@@ -1,13 +1,13 @@
 
 Name:           liblcf
-Version:        0.4.1
+Version:        0.5.0
 Release:        1%{?dist}
 Summary:        RPG Maker 2000/2003 and EasyRPG game data library
 
 Group:          System/Libraries
 License:        MIT
-URL:            https://easy-rpg.org
-Source0:        https://easy-rpg.org/downloads/player/%{name}-%{version}.tar.gz
+URL:            https://easyrpg.org
+Source0:        https://easyrpg.org/downloads/player/%{name}-%{version}.tar.gz
 
 # Requires:       libicu
 # Requires:       libexpat1
@@ -80,6 +80,9 @@ rm %{buildroot}%{_libdir}/liblcf.la
 %{_libdir}/pkgconfig/liblcf.pc
 
 %changelog
+* Fri Sep 23 2016 carstene1ns <dev@ f4ke .de> - 0.5.0-1
+- Upstream Update
+
 * Sat Mar 19 2016 carstene1ns <dev@ f4ke .de> - 0.4.1-1
 - Upstream Update
 

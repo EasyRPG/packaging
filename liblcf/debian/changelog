@@ -1,3 +1,9 @@
+liblcf (0.5.0-1) unstable; urgency=low
+
+  * Upstream update
+
+ -- carstene1ns <dev@ f4ke .de>  Fri, 23 Sep 2016 20:53:00 +0100
+
 liblcf (0.4.1-1) unstable; urgency=low
 
   * Upstream update
