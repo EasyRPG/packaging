@@ -48,6 +48,7 @@ It can read and write LCF and XML files.
 %setup -q
 
 %build
+export CXXFLAGS="%optflags -std=c++11"
 %configure
 make %{?_smp_mflags}
 
