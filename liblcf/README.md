@@ -1,5 +1,5 @@
 
-# liblcf OBS package
+# liblcf
 
 ## Status
 

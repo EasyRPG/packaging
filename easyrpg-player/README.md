@@ -1,5 +1,5 @@
 
-# easyrpg-player OBS package
+# easyrpg-player
 
 ## Status
 
