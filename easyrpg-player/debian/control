@@ -2,9 +2,9 @@ Source: easyrpg-player
 Section: games
 Priority: optional
 Maintainer: carstene1ns <dev@ f4ke .de>
-Build-Depends: debhelper (>= 9), autotools-dev, pkg-config, liblcf-dev, libsdl2-dev, libsdl2-mixer-dev, libpixman-1-dev, libpng12-dev, libfreetype6-dev, libboost-dev
+Build-Depends: debhelper (>= 9), autotools-dev, pkg-config, liblcf-dev, libsdl2-dev, libsdl2-mixer-dev, libpixman-1-dev, libpng12-dev, libfreetype6-dev, libogg-dev, libvorbis-dev, libspeexdsp-dev, libsndfile-dev
 Standards-Version: 3.9.6
-Homepage: https://easy-rpg.org/
+Homepage: https://easyrpg.org
 
 Package: easyrpg-player
 Architecture: any

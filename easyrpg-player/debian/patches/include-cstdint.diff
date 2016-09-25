@@ -1,0 +1,13 @@
+diff -Naur a/src/system.h b/src/system.h
+--- a/src/system.h	2016-09-18 23:35:54.000000000 +0200
++++ b/src/system.h	2016-09-26 00:01:44.532239412 +0200
+@@ -30,6 +30,9 @@
+ #  error "This build doesn't target a backend"
+ #endif
+ 
++// DEBIAN 7.0 / G++ 4.7 PLS
++#include <cstdint>
++
+ /*
+  * TODO?: Combine system.h and options.h ?
+  * options.h is oriented to configurations that the EasyRPG user might want

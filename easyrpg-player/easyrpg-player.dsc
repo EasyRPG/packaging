@@ -2,19 +2,19 @@ Format: 3.0 (quilt)
 Source: easyrpg-player
 Binary: easyrpg-player
 Architecture: any
-Version: 0.4.1-2
+Version: 0.5.0-1
 Maintainer: carstene1ns <dev@ f4ke .de>
-Homepage: https://easy-rpg.org/
+Homepage: https://easyrpg.org
 Standards-Version: 3.9.6
-Build-Depends: debhelper (>= 9), autotools-dev, pkg-config, liblcf-dev, libsdl2-dev, libsdl2-mixer-dev, libpixman-1-dev, libpng12-dev, libfreetype6-dev, libboost-dev
+Build-Depends: debhelper (>= 9), autotools-dev, pkg-config, liblcf-dev, libsdl2-dev, libsdl2-mixer-dev, libpixman-1-dev, libpng12-dev, libfreetype6-dev, libogg-dev, libvorbis-dev, libspeexdsp-dev, libsndfile-dev
 Package-List:
  easyrpg-player deb extra
 Checksums-Sha256:
- e839c5676867d3c88c996b81268f82c74dcaae5cdc5069b812154bcf73dd188b 1997407 easyrpg-player_0.4.1.orig.tar.gz
- fc509a005b022fd3c8a9545c1a66d7e6326ca6d4fe63773b0264f1ecc947f852 2111 easyrpg-player_0.4.1-2.debian.tar.gz
+ 21c9b95536fb6348e84b11ac8e5908688c6e61e9b4eb426247d546a44869241e 2815611 easyrpg-player_0.5.0.orig.tar.gz
+ 932bc2b6f7f3e3e6035c98fea920dc9155b51d5486c64066414e2760d70809ae 2753 easyrpg-player_0.5.0-1.debian.tar.gz
 Checksums-Sha1:
- 7e9e5132bea348de372206d569b5e304d82321eb 1997407 easyrpg-player_0.4.1.orig.tar.gz
- 074595a5ae9213a527f47a6cabd3b1891650fd9f 2111 easyrpg-player_0.4.1-2.debian.tar.gz
+ 384e38407332d3d418cf26e760442b4d5c646b44 2815611 easyrpg-player_0.5.0.orig.tar.gz
+ 120e55fad0abc008122384df3102b250c71f0f5d 2753 easyrpg-player_0.5.0-1.debian.tar.gz
 Files:
- 95d28eee836a5690608bbb051420b9ec 1997407 easyrpg-player_0.4.1.orig.tar.gz
- 6c936435cf0cf393c44d4ee7efc51210 2111 easyrpg-player_0.4.1-2.debian.tar.gz
+ a3e41c001daf1cde80ec65f45bddf49a 2815611 easyrpg-player_0.5.0.orig.tar.gz
+ f01b2bcaf6a4a7988da491c527f3fedf 2753 easyrpg-player_0.5.0-1.debian.tar.gz

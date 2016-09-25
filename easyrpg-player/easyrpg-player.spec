@@ -1,19 +1,20 @@
 
 Name:           easyrpg-player
-Version:        0.4.1
-Release:        2%{?dist}
+Version:        0.5.0
+Release:        1%{?dist}
 Summary:        Game interpreter to play RPG Maker 2000, 2003 and EasyRPG games
 
 Group:          Games
-License:        GPLv3
-URL:            https://easy-rpg.org
-Source0:        https://easy-rpg.org/downloads/player/%{name}-%{version}.tar.gz
+License:        GPL-3.0
+URL:            https://easyrpg.org
+Source0:        https://easyrpg.org/downloads/player/%{name}-%{version}.tar.gz
 
-# Requires:       liblcf
-# Requires:       libSDL2-2_0-0
-# Requires:       libSDL2_mixer-2_0-0
-# Requires:       libpixman-1-0
-# Requires:       libfreetype6
+# seems to be done autmatically
+#Requires:       liblcf
+#Requires:       libSDL2-2_0-0
+#Requires:       libSDL2_mixer-2_0-0
+#Requires:       libpixman-1-0
+#Requires:       libfreetype6
 
 %if 0%{?suse_version}
 BuildRequires:  c++_compiler
@@ -23,18 +24,25 @@ BuildRequires:  gcc-c++
 BuildRequires:  libtool
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(liblcf)
-BuildRequires:  boost-devel
 BuildRequires:  pkgconfig(sdl2)
 BuildRequires:  pkgconfig(SDL2_mixer)
 BuildRequires:  pkgconfig(pixman-1)
 BuildRequires:  pkgconfig(freetype2)
+BuildRequires:  pkgconfig(ogg)
+BuildRequires:  pkgconfig(vorbis)
+BuildRequires:  pkgconfig(speexdsp)
+BuildRequires:  pkgconfig(sndfile)
+BuildRequires:  pkgconfig(libxmp)
+BuildRequires:  pkgconfig(bash-completion)
 %if 0%{?suse_version}
 BuildRequires:  libpng16-devel
 BuildRequires:  libpng16-compat-devel
 %else
 BuildRequires:  pkgconfig(libpng16)
 %endif
-BuildRequires:  doxygen
+
+# currently not building source documentation
+#BuildRequires:  doxygen
 
 %description
 EasyRPG Player is a program that allows to play games created with
@@ -47,7 +55,7 @@ to play all games created with them as the original game interpreter
 %setup -q
 
 %build
-%configure
+%configure --enable-fmmidi=fallback
 make %{?_smp_mflags}
 
 %install
@@ -59,11 +67,15 @@ make %{?_smp_mflags}
 %else
 %license COPYING
 %endif
-%doc README AUTHORS
+%doc README.md AUTHORS.md
 %{_bindir}/*
 %{_mandir}/man6/*
+%{_datadir}/bash-completion/completions/*
 
 %changelog
+* Sat Sep 24 2016 carstene1ns <dev@ f4ke .de> - 0.5.0-1
+- Upstream Update
+
 * Sun Mar 20 2016 carstene1ns <dev@ f4ke .de> - 0.4.1-2
 - Checksum Update
 

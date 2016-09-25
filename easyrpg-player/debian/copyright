@@ -1,9 +1,9 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: easyrpg-player
-Source: https://easy-rpg.org/
+Source: https://easyrpg.org
 
 Files: *
-Copyright: 2015 EasyRPG player authors
+Copyright: 2016 EasyRPG player authors
 License: GPL-3.0+
 
 Files: debian/*
