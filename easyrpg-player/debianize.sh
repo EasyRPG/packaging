@@ -1,11 +1,11 @@
 #!/bin/sh
 
 DEBVER=`grep '^Version' easyrpg-player.dsc | tr -cd '[0-9\.\-]'`
-DEBTAR="easyrpg-player_${DEBVER}.debian.tar.gz"
+DEBTAR="easyrpg-player_${DEBVER}.debian.tar.xz"
 
 echo "Creating ${DEBTAR}:"
 
-tar -cvzf "${DEBTAR}" --exclude='*.ex' debian
+tar -cvJf "${DEBTAR}" --exclude='*.ex' debian
 
 echo "Updating checksums..."
 

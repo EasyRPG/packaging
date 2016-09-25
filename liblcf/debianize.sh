@@ -1,11 +1,11 @@
 #!/bin/sh
 
 DEBVER=`grep '^Version' liblcf.dsc | tr -cd '[0-9\.\-]'`
-DEBTAR="liblcf_${DEBVER}.debian.tar.gz"
+DEBTAR="liblcf_${DEBVER}.debian.tar.xz"
 
 echo "Creating ${DEBTAR}:"
 
-tar -cvzf "${DEBTAR}" --exclude='*.ex' debian
+tar -cvJf "${DEBTAR}" --exclude='*.ex' debian
 
 echo "Updating checksums..."
 
