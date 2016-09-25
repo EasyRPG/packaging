@@ -2,16 +2,6 @@
 	<service name="download_url">
 		<param name="host">archive.ubuntu.com</param>
 		<param name="protocol">http</param>
-		<param name="path">/ubuntu/pool/universe/libs/libsdl2-mixer/libsdl2-mixer_2.0.0+dfsg1-5.dsc</param>
-	</service>
-	<service name="download_url">
-		<param name="host">archive.ubuntu.com</param>
-		<param name="protocol">http</param>
 		<param name="path">/ubuntu/pool/universe/libs/libsdl2-mixer/libsdl2-mixer_2.0.0+dfsg1.orig.tar.xz</param>
-	</service>
-	<service name="download_url">
-		<param name="host">archive.ubuntu.com</param>
-		<param name="protocol">http</param>
-		<param name="path">/ubuntu/pool/universe/libs/libsdl2-mixer/libsdl2-mixer_2.0.0+dfsg1-5.debian.tar.xz</param>
 	</service>
 </services>
