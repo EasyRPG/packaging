@@ -1,3 +1,11 @@
+easyrpg-player (0.5.1-1) unstable; urgency=low
+
+  * Upstream update
+  * Try to use 'libpng-dev' package, as newer Ubuntu versions have
+    switched from 1.2 to 1.6 series. Older ones provide it virtually
+
+ -- carstene1ns <dev@ f4ke .de>  Sun, 16 Apr 2017 23:02:00 +0100
+
 easyrpg-player (0.5.0-1) unstable; urgency=low
 
   * Upstream update

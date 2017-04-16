@@ -3,11 +3,11 @@ Upstream-Name: easyrpg-player
 Source: https://easyrpg.org
 
 Files: *
-Copyright: 2016 EasyRPG player authors
+Copyright: 2017 EasyRPG Player authors
 License: GPL-3.0+
 
 Files: debian/*
-Copyright: 2016 carstene1ns <dev@ f4ke .de>
+Copyright: 2017 carstene1ns <dev@ f4ke .de>
 License: GPL-3.0+
 
 License: GPL-3.0+
