@@ -2,7 +2,7 @@ Format: 3.0 (quilt)
 Source: liblcf
 Binary: liblcf
 Architecture: any
-Version: 0.5.0-1
+Version: 0.5.1-1
 Maintainer: carstene1ns <dev@ f4ke .de>
 Homepage: https://easyrpg.org
 Standards-Version: 3.9.6
@@ -10,11 +10,11 @@ Build-Depends: debhelper (>= 9), autotools-dev, libtool, pkg-config, libexpat-de
 Package-List:
  liblcf deb extra
 Checksums-Sha256:
- 5f77e40bac5b48ab3163c9628846825e44ae8b5ecb4367de2d55845b2ba48524 510529 liblcf_0.5.0.orig.tar.gz
- 27c755209b2b677a4e178eb436d4617d4927753f2bcfeb5bc9cc9dea143b488f 2426 liblcf_0.5.0-1.debian.tar.gz
+ 437f84b3643d04dba1ddea7c676ad51d42e5c781af8b9964cf3c26b3f033aa25 509768 liblcf_0.5.1.orig.tar.gz
+ 9cc11da7b7bcfada6d7946e8bb78635f67dbf90a9b91191cb96d9ec7f1a3c420 2368 liblcf_0.5.1-1.debian.tar.xz
 Checksums-Sha1:
- e3fa82a3487a57e8f9ba430b119b3e81df8a53bd 510529 liblcf_0.5.0.orig.tar.gz
- c93c69c3e525d8c41b929725057200b8be06c1c6 2426 liblcf_0.5.0-1.debian.tar.gz
+ fe03adf56191cabc19fcb8c08aef4bb5dbf3567c 509768 liblcf_0.5.1.orig.tar.gz
+ 4e4369eb5ab04e3949d69c4990cb4ba0d381d436 2368 liblcf_0.5.1-1.debian.tar.xz
 Files:
- ac666378e78f5d96a99f1e364c44c65b 510529 liblcf_0.5.0.orig.tar.gz
- e512c1dac5497c43d7dcc4304fe1abc8 2426 liblcf_0.5.0-1.debian.tar.gz
+ 879310b9b7c04f327ca004301829dee2 509768 liblcf_0.5.1.orig.tar.gz
+ 1e664515932699486f65331b91da8eed 2368 liblcf_0.5.1-1.debian.tar.xz

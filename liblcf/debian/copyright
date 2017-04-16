@@ -1,13 +1,13 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: liblcf
-Source: https://easy-rpg.org/
+Source: https://easyrpg.org/
 
 Files: *
-Copyright: 2015 liblcf authors
+Copyright: 2017 liblcf authors
 License: MIT
 
 Files: debian/*
-Copyright: 2016 carstene1ns <dev@ f4ke .de>
+Copyright: 2017 carstene1ns <dev@ f4ke .de>
 License: MIT
 
 License: MIT

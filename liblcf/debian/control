@@ -4,7 +4,7 @@ Maintainer: carstene1ns <dev@ f4ke .de>
 Build-Depends: debhelper (>= 9), autotools-dev, libtool, pkg-config, libexpat-dev, libicu-dev
 Standards-Version: 3.9.6
 Section: libs
-Homepage: https://easy-rpg.org/
+Homepage: https://easyrpg.org/
 
 Package: liblcf-dev
 Section: libdevel
