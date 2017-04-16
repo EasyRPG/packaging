@@ -1,6 +1,8 @@
 
 # SDL2_mixer (Debian/Ubuntu)
 
+Patched package to allow building, not for distribution!
+
 Reason why it is needed: 
 
  - OBS does not support universe repository for Ubuntu

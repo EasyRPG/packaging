@@ -23,13 +23,13 @@ https://software.opensuse.org/download.html?project=home%3Aeasyrpg&package=easyr
  - Arch
  - Debian 7.0
  - Debian 8.0
- - Fedora 22
  - Fedora 23
  - Fedora 24
+ - Fedora 25
  - openSUSE Leap 42.1 (x86_64 only)
  - openSUSE Leap 42.2 (x86_64 only)
  - openSUSE Tumbleweed
  - xUbuntu 14.04
- - xUbuntu 15.04
- - xUbuntu 15.10
  - xUbuntu 16.04
+ - xUbuntu 16.10
+ - xUbuntu 17.04
