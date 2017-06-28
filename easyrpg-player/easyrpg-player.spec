@@ -1,6 +1,6 @@
 
 Name:           easyrpg-player
-Version:        0.5.1
+Version:        0.5.2
 Release:        1%{?dist}
 Summary:        Game interpreter to play RPG Maker 2000, 2003 and EasyRPG games
 
@@ -78,6 +78,9 @@ make %{?_smp_mflags}
 %{_datadir}/bash-completion/completions/*
 
 %changelog
+* Wed Jun 28 2017 carstene1ns <dev@ f4ke .de> - 0.5.2-1
+- Upstream Update
+
 * Sun Apr 16 2017 carstene1ns <dev@ f4ke .de> - 0.5.1-1
 - Upstream Update
 - Patch mouse wheel code for older SuSE SDL version
