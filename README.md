@@ -24,7 +24,7 @@ https://software.opensuse.org/download.html?project=home%3Aeasyrpg&package=easyr
  - Debian 8.0
  - Debian 9.0
  - Fedora 25
- - Fedora 26
+ - Fedora 26 (currently x86_64 only)
  - openSUSE Leap 42.2 (x86_64 only)
  - openSUSE Leap 42.3 (x86_64 only)
  - openSUSE Tumbleweed
