@@ -36,8 +36,9 @@ BuildRequires:  pkgconfig(speexdsp)
 BuildRequires:  pkgconfig(sndfile)
 BuildRequires:  pkgconfig(libxmp)
 BuildRequires:  pkgconfig(bash-completion)
-# mpg123 still not available?
-#BuildRequires:  pkgconfig(libmpg123)
+%if 0%{?fedora_version} >= 26
+BuildRequires:  pkgconfig(libmpg123)
+%endif
 %if 0%{?suse_version}
 BuildRequires:  libpng16-devel
 BuildRequires:  libpng16-compat-devel
