@@ -32,3 +32,4 @@ https://software.opensuse.org/download.html?project=home%3Aeasyrpg&package=easyr
  - xUbuntu 16.04
  - xUbuntu 16.10
  - xUbuntu 17.04
+ - xUbuntu 17.10 (currently x86_64 only)
