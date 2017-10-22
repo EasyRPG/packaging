@@ -1,14 +1,13 @@
 
 Name:           easyrpg-player
-Version:        0.5.2
+Version:        0.5.3
 Release:        1%{?dist}
 Summary:        Game interpreter to play RPG Maker 2000, 2003 and EasyRPG games
 
-Group:          Games
+Group:          Amusement/Games/RPG
 License:        GPL-3.0
 URL:            https://easyrpg.org
 Source0:        https://easyrpg.org/downloads/player/%{name}-%{version}.tar.gz
-Patch0:         guard-sdl-mousewheel.patch
 
 # seems to be done automatically
 #Requires:       liblcf
@@ -18,11 +17,7 @@ Patch0:         guard-sdl-mousewheel.patch
 #Requires:       libfreetype6
 #Requires:       libpng16
 
-%if 0%{?suse_version}
-BuildRequires:  c++_compiler
-%else
 BuildRequires:  gcc-c++
-%endif
 BuildRequires:  libtool
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(liblcf)
@@ -36,14 +31,12 @@ BuildRequires:  pkgconfig(speexdsp)
 BuildRequires:  pkgconfig(sndfile)
 BuildRequires:  pkgconfig(libxmp)
 BuildRequires:  pkgconfig(bash-completion)
-%if 0%{?fedora_version} >= 26
+BuildRequires:  pkgconfig(libpng16)
+%if 0%{?fedora_version} >= 26 || 0%{?suse_version} > 4220
 BuildRequires:  pkgconfig(libmpg123)
 %endif
 %if 0%{?suse_version}
-BuildRequires:  libpng16-devel
 BuildRequires:  libpng16-compat-devel
-%else
-BuildRequires:  pkgconfig(libpng16)
 %endif
 
 # currently not building source documentation
@@ -58,7 +51,6 @@ to play all games created with them as the original game interpreter
 
 %prep
 %setup -q
-%patch0
 
 %build
 %configure --enable-fmmidi=fallback
@@ -79,6 +71,9 @@ make %{?_smp_mflags}
 %{_datadir}/bash-completion/completions/*
 
 %changelog
+* Sun Oct 22 2017 carstene1ns <dev@ f4ke .de> - 0.5.3-1
+- Upstream Update
+
 * Wed Jun 28 2017 carstene1ns <dev@ f4ke .de> - 0.5.2-1
 - Upstream Update
 
