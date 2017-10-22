@@ -1,6 +1,6 @@
 
 Name:           liblcf
-Version:        0.5.2
+Version:        0.5.3
 Release:        1%{?dist}
 Summary:        RPG Maker 2000/2003 and EasyRPG game data library
 
@@ -37,7 +37,7 @@ It can read and write LCF and XML files.
 
 %package -n liblcf0-devel
 Summary:        RPG Maker 2000/2003 and EasyRPG game data library - development files
-Group:          Development/Libraries
+Group:          Development/Libraries/C and C++
 Requires:       liblcf0 = %{version}
 
 %description -n liblcf0-devel
@@ -80,6 +80,9 @@ rm %{buildroot}%{_libdir}/liblcf.la
 %{_libdir}/pkgconfig/liblcf.pc
 
 %changelog
+* Sun Oct 22 2017 carstene1ns <dev@ f4ke .de> - 0.5.3-1
+- Upstream Update
+
 * Wed Jun 28 2017 carstene1ns <dev@ f4ke .de> - 0.5.2-1
 - Upstream Update
 
