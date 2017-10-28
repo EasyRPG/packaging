@@ -2,7 +2,7 @@
 
 pkgname=easyrpg-player
 pkgver=0.5.3
-pkgrel=1
+pkgrel=2
 pkgdesc="FLOSS RPG Maker 2000/2003 and EasyRPG games interpreter"
 arch=('i686' 'x86_64')
 url="https://easyrpg.org"
@@ -12,16 +12,22 @@ depends=("liblcf>=$pkgver" 'sdl2_mixer' 'pixman' 'freetype2' 'libvorbis' 'mpg123
 optdepends=('wine: for installing the run time packages (RTP)'
             'libxmp: decoder for tracker music, used by few games')
 install=$pkgname.install
-source=("https://easyrpg.org/downloads/player/$pkgname-$pkgver.tar.gz")
-sha256sums=('abd26ed487618780a3675869517fc52d63ad8019c3a87c5aaeefce64c464f83d')
+source=("https://easyrpg.org/downloads/player/$pkgname-$pkgver.tar.gz"
+        "fix_build_with_sdl2_mixer.patch")
+sha256sums=('abd26ed487618780a3675869517fc52d63ad8019c3a87c5aaeefce64c464f83d'
+            'ee2d3f8417bf915d9976554ca082696a5e9f65881ef31e1f06e6bb191cc8deeb')
 
-build () {
+prepare() {
+  patch -d $pkgname-$pkgver -Np1 < fix_build_with_sdl2_mixer.patch
+}
+
+build() {
   cd $pkgname-$pkgver
 
   ./configure --prefix=/usr --enable-fmmidi=fallback
   make
 }
 
-package () {
+package() {
   make -C $pkgname-$pkgver DESTDIR="$pkgdir/" install
 }

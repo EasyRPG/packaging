@@ -1,0 +1,18 @@
+diff --git a/src/audio_sdl_mixer.cpp b/src/audio_sdl_mixer.cpp
+index 1aa412578..d6c9beb16 100644
+--- a/src/audio_sdl_mixer.cpp
++++ b/src/audio_sdl_mixer.cpp
+@@ -242,8 +242,12 @@ void SdlMixerAudio::BGM_OnPlayedOnce() {
+ 
+ 	if (!bgm_stop) {
+ 		played_once = true;
+-		// Play indefinitely without fade-in
++
++// introduced in SDL2_mixer 2.0.2, which deprecated libmad
++#ifndef SDL_MIXER_COMPILEDVERSION
+ 		if (Mix_GetMusicType(bgm.get()) != MUS_MP3_MAD)
++#endif
++			// Play indefinitely without fade-in
+ 			Mix_PlayMusic(bgm.get(), -1);
+ 	}
+ }
