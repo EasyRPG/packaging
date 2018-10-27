@@ -1,8 +1,8 @@
 # Maintained here: https://aur.archlinux.org/packages/easyrpg-player
 
 pkgname=easyrpg-player
-pkgver=0.5.3
-pkgrel=2
+pkgver=0.5.4
+pkgrel=1
 pkgdesc="FLOSS RPG Maker 2000/2003 and EasyRPG games interpreter"
 arch=('i686' 'x86_64')
 url="https://easyrpg.org"
@@ -10,16 +10,12 @@ license=('GPL3')
 depends=("liblcf>=$pkgver" 'sdl2_mixer' 'pixman' 'freetype2' 'libvorbis' 'mpg123'
          'libsndfile' 'speexdsp')
 optdepends=('wine: for installing the run time packages (RTP)'
-            'libxmp: decoder for tracker music, used by few games')
+            'libxmp: decoder for tracker music, used by few games'
+            'rpg2000-rtp: run time package for some 2k games'
+            'rpg2003-rtp: run time package for some 2k3 games')
 install=$pkgname.install
-source=("https://easyrpg.org/downloads/player/$pkgname-$pkgver.tar.gz"
-        "fix_build_with_sdl2_mixer.patch")
-sha256sums=('abd26ed487618780a3675869517fc52d63ad8019c3a87c5aaeefce64c464f83d'
-            'ee2d3f8417bf915d9976554ca082696a5e9f65881ef31e1f06e6bb191cc8deeb')
-
-prepare() {
-  patch -d $pkgname-$pkgver -Np1 < fix_build_with_sdl2_mixer.patch
-}
+source=("https://easyrpg.org/downloads/player/$pkgname-$pkgver.tar.gz")
+sha256sums=('88d487c7bd055e69803700307dd1f519c000676061e0209140e5511d4c6e1170')
 
 build() {
   cd $pkgname-$pkgver
