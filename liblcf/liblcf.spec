@@ -52,9 +52,7 @@ It can read and write LCF and XML files.
 make %{?_smp_mflags}
 
 %check
-%ifarch x86_64
 make check
-%endif
 
 %install
 %make_install
@@ -78,9 +76,13 @@ rm %{buildroot}%{_libdir}/liblcf.la
 %{_libdir}/liblcf.a
 %{_libdir}/liblcf.so
 %{_libdir}/pkgconfig/liblcf.pc
+%if 0%{?suse_version}
+%{_libdir}/cmake
+%endif
+%{_libdir}/cmake/liblcf
 
 %changelog
-* Sat Oct 27 2017 carstene1ns <dev@ f4ke .de> - 0.5.4-1
+* Sat Oct 27 2018 carstene1ns <dev@ f4ke .de> - 0.5.4-1
 - Upstream Update
 
 * Sun Oct 22 2017 carstene1ns <dev@ f4ke .de> - 0.5.3-1
