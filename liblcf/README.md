@@ -3,13 +3,7 @@
 
 ## Status
 
-System     | Status
------------| ------
-Arch Linux | ✔
-Debian     | ✔
-Ubuntu     | ✔
-Fedora     | ✔
-openSUSE   | ✔
+See https://build.opensuse.org/package/show/home:easyrpg/liblcf#build
 
 ## Notes
 

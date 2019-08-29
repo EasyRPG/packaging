@@ -13,22 +13,19 @@ https://build.opensuse.org/project/show/home:easyrpg
 
 https://software.opensuse.org/download.html?project=home%3Aeasyrpg&package=easyrpg-player
 
-## Currently Supported Architectures
+## Current Support Table
 
- - i586
- - x86_64
+Distribution                      | Architecture: i586 | x86_64
+--------------------------------- | :----------------: | :----:
+Arch                              | ✘                  | ✔
+Debian 8.0, 9.0 and 10.0          | ✔                  | ✔
+Fedora 28, 29 and 30              | ✘                  | ✔
+openSUSE Leap 42.3, 15.0 and 15.1 | ✘                  | ✔
+openSUSE Tumbleweed               | ✔                  | ✔
+xUbuntu 14.04 and 16.04           | ✔                  | ✔
+xUbuntu 18.04, 18.10 and 19.04    | ✘                  | ✔
 
-### Currently Supported Distributions
+Additional Architectures are available for some distributions:
+ARM (armv7l, aarch64), PowerPC (ppc64le)
 
- - Arch (x86_64 only)
- - Debian 8.0
- - Debian 9.0
- - Fedora 27 (x86_64 only)
- - Fedora 28 (x86_64 only)
- - Fedora 29 (x86_64 only)
- - openSUSE Leap 42.3 (x86_64 only)
- - openSUSE Tumbleweed
- - xUbuntu 14.04
- - xUbuntu 16.04
- - xUbuntu 18.04 (x86_64 only)
- - xUbuntu 18.10 (x86_64 only)
+These cannot be tested by us and are unsupported. We appreciate feedback. :)
