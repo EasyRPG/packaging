@@ -1,10 +1,10 @@
 
 Name:           easyrpg-player
-Version:        0.6.0
+Version:        0.6.1
 Release:        1%{?dist}
 Summary:        Game interpreter to play RPG Maker 2000, 2003 and EasyRPG games
 
-Group:          Amusement/Games/RPG
+Group:          Amusements/Games/RPG
 License:        GPL-3.0
 URL:            https://easyrpg.org
 Source0:        https://easyrpg.org/downloads/player/%{version}/%{name}-%{version}.tar.xz
@@ -71,6 +71,9 @@ make %{?_smp_mflags}
 %{_datadir}/bash-completion/completions/*
 
 %changelog
+* Thu Aug 29 2019 carstene1ns <dev@ f4ke .de> - 0.6.1-1
+- Upstream Update
+
 * Mon Mar 04 2019 carstene1ns <dev@ f4ke .de> - 0.6.0-1
 - Upstream Update
 
