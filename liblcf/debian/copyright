@@ -3,11 +3,11 @@ Upstream-Name: liblcf
 Source: https://easyrpg.org/
 
 Files: *
-Copyright: 2014-2019 liblcf authors
+Copyright: 2014-2020 liblcf authors
 License: MIT
 
 Files: debian/*
-Copyright: 2017-2019 carstene1ns <dev@ f4ke .de>
+Copyright: 2017-2020 carstene1ns <dev@ f4ke .de>
 License: MIT
 
 License: MIT
