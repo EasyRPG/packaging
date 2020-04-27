@@ -18,12 +18,12 @@ https://software.opensuse.org/download.html?project=home%3Aeasyrpg&package=easyr
 Distribution                      | Architecture: i586 | x86_64
 --------------------------------- | :----------------: | :----:
 Arch                              | ✘                  | ✔
-Debian 8.0, 9.0 and 10.0          | ✔                  | ✔
-Fedora 28, 29 and 30              | ✘                  | ✔
-openSUSE Leap 42.3, 15.0 and 15.1 | ✘                  | ✔
+Debian 9.0, 10.0 and testing      | ✔                  | ✔
+Fedora 29, 30, 31, rawhide        | ✘                  | ✔
+openSUSE Leap 15.0, 15.1 and 15.2 | ✘                  | ✔
 openSUSE Tumbleweed               | ✔                  | ✔
-xUbuntu 14.04 and 16.04           | ✔                  | ✔
-xUbuntu 18.04, 18.10 and 19.04    | ✘                  | ✔
+xUbuntu 16.04                     | ✔                  | ✔
+xUbuntu 18.04/10, 19.04/10, 20.4  | ✘                  | ✔
 
 Additional Architectures are available for some distributions:
 ARM (armv7l, aarch64), PowerPC (ppc64le)
