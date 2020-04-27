@@ -48,7 +48,11 @@ It can read and write LCF and XML files.
 %setup -q
 
 %build
-%configure
+#Tumbleweed hack
+%if 0%{?suse_version} > 1500
+export CXXFLAGS="%{build_cxxflags} -ffat-lto-objects"
+%endif
+%configure --disable-update-mimedb
 make %{?_smp_mflags}
 
 %check
