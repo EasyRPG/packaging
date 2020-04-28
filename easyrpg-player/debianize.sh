@@ -37,25 +37,49 @@ echo "Copying source archive:"
 cp "easyrpg-player-${ORIGVER}.tar.xz" $ORIGTAR
 
 echo "Creating ${DEBTAR}:"
-tar -cvJf "${DEBTAR}" --exclude='*.ex' debian
+tar -cJf "${DEBTAR}" --exclude='*.ex' debian
 
 echo "Updating checksums..."
 add_checksums easyrpg-player.dsc
 
-COMPATDISTRO="xUbuntu_16.04"
-echo "Generating compat package for ${COMPATDISTRO} Xenial"
-
-sed -i'.bak' 's/10/9/' debian/compat
-sed -i'.bak' 's/debhelper (>= 10)/debhelper (>= 9)/' debian/control
-sed -e 's/debhelper (>= 10)/debhelper (>= 9)/' \
-  -e "s/${DEBVER}/&xenial/" \
-  easyrpg-player.dsc > "easyrpg-player-${COMPATDISTRO}.dsc"
-
-DEBVER="${DEBVER}xenial"
+OLDDEBVER=${DEBVER}
+DEBVER="${OLDDEBVER}oldstable"
 DEBTAR="easyrpg-player_${DEBVER}.debian.tar.xz"
+COMPATDISTRO="Debian_9.0"
+
+echo "Generating compat package for xUbuntu_18.04/18.10 Bionic/Cosmic and Debian 9"
+
+# disable mp3 support
+sed -e 's/, libmpg123-dev//' \
+  -e "s/${OLDDEBVER}/${DEBVER}/" \
+  easyrpg-player.dsc > "easyrpg-player-${COMPATDISTRO}.dsc"
+sed -i'.bak' 's/, libmpg123-dev//' debian/control
 
 echo "Creating ${DEBTAR}:"
-tar -cvJf "${DEBTAR}" --exclude='*.ex' debian
+tar -cJf "${DEBTAR}" --exclude='*.ex' debian
+
+echo "Updating checksums..."
+add_checksums "easyrpg-player-${COMPATDISTRO}.dsc"
+
+cp "easyrpg-player-${COMPATDISTRO}.dsc" "easyrpg-player-xUbuntu_18.04.dsc"
+cp "easyrpg-player-${COMPATDISTRO}.dsc" "easyrpg-player-xUbuntu_18.10.dsc"
+
+DEBVER="${OLDDEBVER}xenial"
+DEBTAR="easyrpg-player_${DEBVER}.debian.tar.xz"
+COMPATDISTRO="xUbuntu_16.04"
+
+echo "Generating compat package for ${COMPATDISTRO} Xenial"
+
+# downgrade debhelper (no parallel builds)
+sed -i'.bak' 's/10/9/' debian/compat
+sed -i 's/debhelper (>= 10)/debhelper (>= 9)/' debian/control
+sed -e 's/, libmpg123-dev//' \
+  -e 's/debhelper (>= 10)/debhelper (>= 9)/' \
+  -e "s/${OLDDEBVER}/${DEBVER}/" \
+  easyrpg-player.dsc > "easyrpg-player-${COMPATDISTRO}.dsc"
+
+echo "Creating ${DEBTAR}:"
+tar -cJf "${DEBTAR}" --exclude='*.ex' debian
 
 echo "Updating checksums..."
 add_checksums "easyrpg-player-${COMPATDISTRO}.dsc"

@@ -9,14 +9,6 @@ License:        GPL-3.0
 URL:            https://easyrpg.org
 Source0:        https://easyrpg.org/downloads/player/%{version}/%{name}-%{version}.tar.xz
 
-# seems to be done automatically
-#Requires:       liblcf
-#Requires:       libSDL2-2_0-0
-#Requires:       libSDL2_mixer-2_0-0
-#Requires:       libpixman-1-0
-#Requires:       libfreetype6
-#Requires:       libpng16
-
 BuildRequires:  gcc-c++
 BuildRequires:  libtool
 BuildRequires:  pkgconfig
@@ -32,7 +24,7 @@ BuildRequires:  pkgconfig(sndfile)
 BuildRequires:  pkgconfig(libxmp)
 BuildRequires:  pkgconfig(bash-completion)
 BuildRequires:  pkgconfig(libpng16)
-%if 0%{?fedora_version} >= 26 || 0%{?suse_version} > 4220
+%if 0%{?fedora_version} >= 26 || ( 0%{?sle_version} >= 120300 && 0%{?is_opensuse} )
 BuildRequires:  pkgconfig(libmpg123)
 %endif
 %if 0%{?suse_version}
