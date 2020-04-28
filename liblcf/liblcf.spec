@@ -56,7 +56,9 @@ export CXXFLAGS="%{build_cxxflags} -ffat-lto-objects"
 make %{?_smp_mflags}
 
 %check
+%if 0%{?fedora_version} != 30
 make check
+%endif
 
 %install
 %make_install
