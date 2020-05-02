@@ -29,6 +29,10 @@ BuildRequires:  pkgconfig(libpng16)
 %if 0%{?fedora_version} >= 26 || ( 0%{?sle_version} >= 120300 && 0%{?is_opensuse} )
 BuildRequires:  pkgconfig(libmpg123)
 %endif
+%if 0%{?suse_version} > 1500
+# tumbleweed needs this
+BuildRequires:  mpg123-devel
+%endif
 %if 0%{?suse_version}
 BuildRequires:  libpng16-compat-devel
 %endif
