@@ -15,15 +15,24 @@ https://software.opensuse.org/download.html?project=home%3Aeasyrpg&package=easyr
 
 ## Current Support Table
 
-Distribution                      | Architecture: i586 | x86_64
---------------------------------- | :----------------: | :----:
-Arch                              | ✘                  | ✔
-Debian 9.0, 10.0 and testing      | ✔                  | ✔
-Fedora 29, 30, 31, rawhide        | ✘                  | ✔
-openSUSE Leap 15.0, 15.1 and 15.2 | ✘                  | ✔
-openSUSE Tumbleweed               | ✔                  | ✔
-xUbuntu 16.04                     | ✔                  | ✔
-xUbuntu 18.04/10, 19.04/10, 20.4  | ✘                  | ✔
+Distribution        | i586 | x86_64 | mp3 support
+--------------------| :--: | :----: | :---------:
+Arch                | ✘    | ✔      | ✔
+Debian 9.0          | ✔    | ✔      | ✘
+Debian 10.0         | ✔    | ✔      | ✔
+Debian testing      | ✔    | ✔      | ✔
+Fedora 29           | ✘    | ✔      | ✔
+Fedora 30           | ✘    | ✔      | ✔
+Fedora 31           | ✘    | ✔      | ✔
+Fedora rawhide      | ✘    | ✔      | ✔
+openSUSE Leap 15.0  | ✘    | ✔      | ✔
+openSUSE Leap 15.1  | ✘    | ✔      | ✔
+openSUSE Leap 15.2  | ✘    | ✔      | ✔
+openSUSE Tumbleweed | ✔    | ✔      | ✔
+xUbuntu 16.04       | ✔    | ✔      | ✘
+xUbuntu 18.04/10    | ✘    | ✔      | ✘
+xUbuntu 19.04/10    | ✘    | ✔      | ✔
+xUbuntu 20.04       | ✘    | ✔      | ✔
 
 Additional Architectures are available for some distributions:
 ARM (armv7l, aarch64), PowerPC (ppc64le)
