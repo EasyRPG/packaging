@@ -37,7 +37,7 @@ echo "Copying source archive:"
 cp "easyrpg-player-${ORIGVER}.tar.xz" $ORIGTAR
 
 echo "Creating ${DEBTAR}:"
-tar -cJf "${DEBTAR}" --exclude='*.ex' debian
+tar -cJf "${DEBTAR}" --exclude='*.ex' --exclude='*.bak' debian
 
 echo "Updating checksums..."
 add_checksums easyrpg-player.dsc
@@ -56,7 +56,7 @@ sed -e 's/, libmpg123-dev//' \
 sed -i'.bak' 's/, libmpg123-dev//' debian/control
 
 echo "Creating ${DEBTAR}:"
-tar -cJf "${DEBTAR}" --exclude='*.ex' debian
+tar -cJf "${DEBTAR}" --exclude='*.ex' --exclude='*.bak' debian
 
 echo "Updating checksums..."
 add_checksums "easyrpg-player-${COMPATDISTRO}.dsc"
@@ -79,7 +79,7 @@ sed -e 's/, libmpg123-dev//' \
   easyrpg-player.dsc > "easyrpg-player-${COMPATDISTRO}.dsc"
 
 echo "Creating ${DEBTAR}:"
-tar -cJf "${DEBTAR}" --exclude='*.ex' debian
+tar -cJf "${DEBTAR}" --exclude='*.ex' --exclude='*.bak' debian
 
 echo "Updating checksums..."
 add_checksums "easyrpg-player-${COMPATDISTRO}.dsc"
