@@ -6,15 +6,15 @@ Version: 0.6.2-1
 Maintainer: carstene1ns <dev@ f4ke .de>
 Homepage: https://easyrpg.org
 Standards-Version: 3.9.6
-Build-Depends: debhelper (>= 10), pkg-config, liblcf-dev, libsdl2-dev, libsdl2-mixer-dev, libpixman-1-dev, libpng-dev, libfreetype6-dev, libogg-dev, libvorbis-dev, libspeexdsp-dev, libsndfile-dev, libmpg123-dev
+Build-Depends: debhelper (>= 10), pkg-config, liblcf-dev, libsdl2-dev, libsdl2-mixer-dev, libpixman-1-dev, libpng-dev, libfreetype6-dev, libharfbuzz-dev, libogg-dev, libvorbis-dev, libspeexdsp-dev, libsndfile-dev, libopusfile-dev, libmpg123-dev
 Package-List:
  easyrpg-player deb extra
 Checksums-Sha256:
  3550200c4b7c42fa7bd5774de5016b48d5660cc33d1614f174f474702ee253b9 4202508 easyrpg-player_0.6.2.orig.tar.xz
- ddbb8fc24c9fdacae48ad3445955dbcf995acea9a28ca24a40d299fc85dfa186 2964 easyrpg-player_0.6.2-1.debian.tar.xz
+ 6af4d1c8fd36c8dfc1ccde95c900469165b4c64357c543a481f14088472f599f 2976 easyrpg-player_0.6.2-1.debian.tar.xz
 Checksums-Sha1:
  423f7e25eaf45b61c4050385d6aa1b1b433bbdb4 4202508 easyrpg-player_0.6.2.orig.tar.xz
- daca32b9fcf507c6ba4926e57f3c45e593f3c96f 2964 easyrpg-player_0.6.2-1.debian.tar.xz
+ 978fe02272b8c3875f0f6c765f3e7cf9814819ac 2976 easyrpg-player_0.6.2-1.debian.tar.xz
 Files:
  e4de29261660c04893b2a8d8cedb932b 4202508 easyrpg-player_0.6.2.orig.tar.xz
- d958b3b09b9c636c0d53eeb695aef304 2964 easyrpg-player_0.6.2-1.debian.tar.xz
+ e4e2eaaf2577c757f300f6e14d369b2f 2976 easyrpg-player_0.6.2-1.debian.tar.xz
