@@ -1,2 +1,2 @@
 sdl-older-than-205.diff
-no-filefinder-tests.diff
+fix-constexpr-error.diff
