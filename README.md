@@ -21,18 +21,15 @@ Arch                | ✘    | ✔      | ✔
 Debian 9.0          | ✔    | ✔      | ✘
 Debian 10.0         | ✔    | ✔      | ✔
 Debian testing      | ✔    | ✔      | ✔
-Fedora 29           | ✘    | ✔      | ✔
 Fedora 30           | ✘    | ✔      | ✔
 Fedora 31           | ✘    | ✔      | ✔
-Fedora rawhide      | ✘    | ✔      | ✔
-openSUSE Leap 15.0  | ✘    | ✔      | ✔
 openSUSE Leap 15.1  | ✘    | ✔      | ✔
 openSUSE Leap 15.2  | ✘    | ✔      | ✔
 openSUSE Tumbleweed | ✔    | ✔      | ✔
 xUbuntu 16.04       | ✔    | ✔      | ✘
 xUbuntu 18.04/10    | ✘    | ✔      | ✘
 xUbuntu 19.04/10    | ✘    | ✔      | ✔
-xUbuntu 20.04       | ✘    | ✔      | ✔
+xUbuntu 20.04/10    | ✘    | ✔      | ✔
 
 Additional Architectures are available for some distributions:
 ARM (armv7l, aarch64), PowerPC (ppc64le)
