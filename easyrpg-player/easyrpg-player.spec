@@ -49,6 +49,11 @@ to play all games created with them as the original game interpreter
 
 %prep
 %setup -q
+%ifarch ppc64le
+# disable powerpc intrinsics in c++ mode
+sed -i -e '/^AX_CXX_COMPILE_STDCXX/ s/noext/ext/' configure.ac
+autoreconf -fi
+%endif
 
 %build
 %configure --enable-fmmidi=fallback
