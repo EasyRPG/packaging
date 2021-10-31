@@ -1,6 +1,6 @@
 
 Name:           liblcf
-Version:        0.6.2
+Version:        0.7.0
 Release:        1%{?dist}
 Summary:        RPG Maker 2000/2003 and EasyRPG game data library
 
@@ -44,6 +44,15 @@ Requires:       liblcf0 = %{version}
 liblcf is a library to handle RPG Maker 2000/2003 and EasyRPG game data.
 It can read and write LCF and XML files.
 
+%package -n liblcf0-tools
+Summary:        RPG Maker 2000/2003 and EasyRPG game data library - tools
+Group:          Games and Entertainment
+Requires:       liblcf0 = %{version}
+
+%description -n liblcf0-tools
+Tools to handle RPG Maker 2000/2003 and EasyRPG game data.
+They can read and write LCF and XML files.
+
 %prep
 %setup -q
 
@@ -56,9 +65,7 @@ export CXXFLAGS="%{build_cxxflags} -ffat-lto-objects"
 make %{?_smp_mflags}
 
 %check
-%if 0%{?fedora_version} != 30
 make check
-%endif
 
 %install
 %make_install
@@ -79,7 +86,7 @@ rm %{buildroot}%{_libdir}/liblcf.la
 %{_datadir}/mime/packages/liblcf.xml
 
 %files -n liblcf0-devel
-%{_includedir}/liblcf
+%{_includedir}/lcf
 %{_libdir}/liblcf.a
 %{_libdir}/liblcf.so
 %{_libdir}/pkgconfig/liblcf.pc
@@ -89,7 +96,14 @@ rm %{buildroot}%{_libdir}/liblcf.la
 %{_libdir}/cmake/liblcf
 %endif
 
+%files -n liblcf0-tools
+%{_bindir}/lcf2xml
+%{_bindir}/lcfstrings
+
 %changelog
+* Sun Oct 31 2021 carstene1ns <dev@ f4ke .de> - 0.7.0-1
+- Upstream Update
+
 * Mon Apr 27 2020 carstene1ns <dev@ f4ke .de> - 0.6.2-1
 - Upstream Update
 

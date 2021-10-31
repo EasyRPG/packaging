@@ -1,3 +1,9 @@
+liblcf (0.7.0-1) unstable; urgency=low
+
+  * Upstream update
+
+ -- carstene1ns <dev@ f4ke .de>  Sun, 31 Oct 2021 21:16:39 +0100
+
 liblcf (0.6.2-1) unstable; urgency=low
 
   * Upstream update
