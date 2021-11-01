@@ -5,5 +5,5 @@
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
-	  -DCMAKE_POSITION_INDEPENDENT_CODE=on \
+	  -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
 	  -DFMT_PEDANTIC=OFF -DFMT_DOC=OFF -DFMT_TEST=OFF

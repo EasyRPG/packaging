@@ -18,7 +18,6 @@ https://software.opensuse.org/download.html?project=home%3Aeasyrpg&package=easyr
 Distribution        | i586 | x86_64 | mp3 support
 --------------------| :--: | :----: | :---------:
 Arch                | ✘    | ✔      | ✔
-Debian 9.0          | ✘(x) | ✘(x)   | ✘
 Debian 10           | ✔    | ✔      | ✔
 Debian 11           | ✔    | ✔      | ✔
 Debian testing      | ✘    | ✔      | ✔
@@ -35,5 +34,3 @@ Additional Architectures are available for some distributions:
 ARM (armv7l, aarch64), PowerPC (ppc64le)
 
 These cannot be tested by us and are unsupported. We appreciate feedback. :)
-
-x = currently broken
