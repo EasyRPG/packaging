@@ -1,1 +1,1 @@
-sdl-older-than-205.diff
+fix-alsa-conditional.patch

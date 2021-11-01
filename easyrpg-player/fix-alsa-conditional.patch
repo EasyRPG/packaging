@@ -1,0 +1,64 @@
+--- 070/configure.ac	2021-10-31 23:31:00.721750000 +0100
++++ new/configure.ac	2021-10-31 23:55:24.243758737 +0100
+@@ -87,10 +87,10 @@
+ 
+ 	AS_IF([test "$with_alsa" = "yes"],[
+ 		AC_DEFINE(HAVE_NATIVE_MIDI,[1],[Native Midi support])
+-		AM_CONDITIONAL([HAVE_ALSA], [test "$with_alsa" = "yes"])
+ 		AX_PTHREAD
+ 	])
+ ])
++AM_CONDITIONAL([HAVE_ALSA], [test "$with_alsa" = "yes"])
+ 
+ # bash completion
+ AC_ARG_WITH([bash-completion-dir],[AS_HELP_STRING([--with-bash-completion-dir@<:@=DIR@:>@],
+--- 070/configure	2021-10-29 21:42:06.000000000 +0200
++++ new/configure	2021-11-01 00:15:22.344412701 +0100
+@@ -655,6 +655,8 @@
+ HAVE_BASHCOMPLETION_FALSE
+ HAVE_BASHCOMPLETION_TRUE
+ BASHCOMPLETION_DIR
++HAVE_ALSA_FALSE
++HAVE_ALSA_TRUE
+ PTHREAD_CFLAGS
+ PTHREAD_LIBS
+ PTHREAD_CXX
+@@ -672,8 +674,6 @@
+ build_vendor
+ build_cpu
+ build
+-HAVE_ALSA_FALSE
+-HAVE_ALSA_TRUE
+ LIBSPEEXDSP_LIBS
+ LIBSPEEXDSP_CFLAGS
+ LIBXMP_LIBS
+@@ -9563,14 +9563,6 @@
+ 
+ $as_echo "#define HAVE_NATIVE_MIDI 1" >>confdefs.h
+ 
+-		 if test "$with_alsa" = "yes"; then
+-  HAVE_ALSA_TRUE=
+-  HAVE_ALSA_FALSE='#'
+-else
+-  HAVE_ALSA_TRUE='#'
+-  HAVE_ALSA_FALSE=
+-fi
+-
+ 
+ 
+ 
+@@ -10299,6 +10291,14 @@
+ fi
+ 
+ fi
++ if test "$with_alsa" = "yes"; then
++  HAVE_ALSA_TRUE=
++  HAVE_ALSA_FALSE='#'
++else
++  HAVE_ALSA_TRUE='#'
++  HAVE_ALSA_FALSE=
++fi
++
+ 
+ # bash completion
+ 

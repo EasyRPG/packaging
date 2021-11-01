@@ -47,7 +47,7 @@ DEBVER="${OLDDEBVER}oldstable"
 DEBTAR="easyrpg-player_${DEBVER}.debian.tar.xz"
 COMPATDISTRO="Debian_9.0"
 
-echo "Generating compat package for xUbuntu_18.04/18.10 Bionic/Cosmic and Debian 9"
+echo "Generating compat package (no mp3) for xUbuntu_18.04 Bionic and Debian 9"
 
 # disable mp3 support
 sed -e 's/, libmpg123-dev//' \
@@ -62,13 +62,12 @@ echo "Updating checksums..."
 add_checksums "easyrpg-player-${COMPATDISTRO}.dsc"
 
 cp "easyrpg-player-${COMPATDISTRO}.dsc" "easyrpg-player-xUbuntu_18.04.dsc"
-cp "easyrpg-player-${COMPATDISTRO}.dsc" "easyrpg-player-xUbuntu_18.10.dsc"
 
 DEBVER="${OLDDEBVER}xenial"
 DEBTAR="easyrpg-player_${DEBVER}.debian.tar.xz"
 COMPATDISTRO="xUbuntu_16.04"
 
-echo "Generating compat package for ${COMPATDISTRO} Xenial"
+echo "Generating compat package (old debhelper, no mp3) for ${COMPATDISTRO} Xenial"
 
 # downgrade debhelper (no parallel builds)
 sed -i'.bak' 's/10/9/' debian/compat
