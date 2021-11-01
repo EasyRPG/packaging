@@ -63,25 +63,4 @@ add_checksums "easyrpg-player-${COMPATDISTRO}.dsc"
 
 cp "easyrpg-player-${COMPATDISTRO}.dsc" "easyrpg-player-xUbuntu_18.04.dsc"
 
-DEBVER="${OLDDEBVER}xenial"
-DEBTAR="easyrpg-player_${DEBVER}.debian.tar.xz"
-COMPATDISTRO="xUbuntu_16.04"
-
-echo "Generating compat package (old debhelper, no mp3) for ${COMPATDISTRO} Xenial"
-
-# downgrade debhelper (no parallel builds)
-sed -i'.bak' 's/10/9/' debian/compat
-sed -i 's/debhelper (>= 10)/debhelper (>= 9)/' debian/control
-sed -e 's/, libmpg123-dev//' \
-  -e 's/debhelper (>= 10)/debhelper (>= 9)/' \
-  -e "s/${OLDDEBVER}/${DEBVER}/" \
-  easyrpg-player.dsc > "easyrpg-player-${COMPATDISTRO}.dsc"
-
-echo "Creating ${DEBTAR}:"
-tar -cJf "${DEBTAR}" --exclude='*.ex' --exclude='*.bak' debian
-
-echo "Updating checksums..."
-add_checksums "easyrpg-player-${COMPATDISTRO}.dsc"
-
-mv debian/compat.bak debian/compat
 mv debian/control.bak debian/control
