@@ -1,1 +1,0 @@
-../easyrpg-player/add_changelog.sh
