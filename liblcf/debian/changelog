@@ -1,3 +1,9 @@
+liblcf (0.7.0-3) unstable; urgency=low
+
+  * OBS rebuild
+
+ -- carstene1ns <dev@ f4ke .de>  Sun, 13 Mar 2022 21:26:38 +0100
+
 liblcf (0.7.0-2) unstable; urgency=low
 
   * Upgrade to debhelper 10

@@ -1,3 +1,9 @@
+easyrpg-player (0.7.0-3) unstable; urgency=low
+
+  * OBS rebuild
+
+ -- carstene1ns <dev@ f4ke .de>  Sun, 13 Mar 2022 21:52:35 +0100
+
 easyrpg-player (0.7.0-2) unstable; urgency=low
 
   * Cleanup

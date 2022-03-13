@@ -1,7 +1,7 @@
 
 Name:           easyrpg-player
 Version:        0.7.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Game interpreter to play RPG Maker 2000, 2003 and EasyRPG games
 
 Group:          Amusements/Games/RPG
@@ -78,6 +78,9 @@ make %{?_smp_mflags}
 %{_datadir}/bash-completion/completions/*
 
 %changelog
+* Sun Mar 13 2022 carstene1ns <dev@ f4ke .de> - 0.7.0-2
+- OBS rebuild
+
 * Sun Oct 31 2021 carstene1ns <dev@ f4ke .de> - 0.7.0-1
 - Upstream update
 - New dependencies
