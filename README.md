@@ -13,24 +13,13 @@ https://build.opensuse.org/project/show/home:easyrpg
 
 https://software.opensuse.org/download.html?project=home%3Aeasyrpg&package=easyrpg-player
 
-## Current Support Table
+## Current Distribution Support
 
-Distribution        | i586 | x86_64 | mp3 support
---------------------| :--: | :----: | :---------:
-Arch                | ✘    | ✔      | ✔
-Debian 10           | ✔    | ✔      | ✔
-Debian 11           | ✔    | ✔      | ✔
-Debian testing      | ✘    | ✔      | ✔
-Fedora 32           | ✘    | ✔      | ✔
-openSUSE Leap 15.2  | ✘    | ✔      | ✔
-openSUSE Leap 15.3  | ✘    | ✔      | ✔
-openSUSE Leap 15.4  | ✘    | ✔      | ✔
-openSUSE Tumbleweed | ✔    | ✔      | ✔
-xUbuntu 18.04       | ✘    | ✔      | ✘
-xUbuntu 20.04/10    | ✘    | ✔      | ✔
-xUbuntu 21.04/10    | ✘    | ✔      | ✔
+![distributions-graph](distributions.png)
 
-Additional Architectures are available for some distributions:
-ARM (armv7l, aarch64), PowerPC (ppc64le)
 
-These cannot be tested by us and are unsupported. We appreciate feedback. :)
+### Notes
+
+xUbuntu 18.04 is lacking MP3 support!
+
+Additional Architectures like ARM cannot be tested by us and are unsupported. We appreciate feedback. :)
