@@ -1,7 +1,7 @@
 
 Name:           easyrpg-player
 Version:        0.7.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Game interpreter to play RPG Maker 2000, 2003 and EasyRPG games
 
 Group:          Amusements/Games/RPG
@@ -29,16 +29,12 @@ BuildRequires:  pkgconfig(libxmp)
 BuildRequires:  pkgconfig(bash-completion)
 BuildRequires:  pkgconfig(libpng16)
 BuildRequires:  pkgconfig(fluidsynth)
-%if 0%{?fedora_version} >= 26 || ( 0%{?sle_version} >= 120300 && 0%{?is_opensuse} )
 BuildRequires:  pkgconfig(libmpg123)
-%endif
 %if 0%{?suse_version} > 1500
 # tumbleweed needs this
 BuildRequires:  mpg123-devel
 %endif
-%if 0%{?suse_version}
 BuildRequires:  libpng16-compat-devel
-%endif
 
 # currently not building source documentation
 #BuildRequires:  doxygen
@@ -78,6 +74,10 @@ make %{?_smp_mflags}
 %{_datadir}/bash-completion/completions/*
 
 %changelog
+* Tue Jun 14 2022 carstene1ns <dev@ f4ke .de> - 0.7.0-3
+- OBS rebuild
+- Remove fedora support, leave only modern openSUSE
+
 * Sun Mar 13 2022 carstene1ns <dev@ f4ke .de> - 0.7.0-2
 - OBS rebuild
 
