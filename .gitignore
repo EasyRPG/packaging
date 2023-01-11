@@ -1,2 +1,2 @@
-.osc/
-*/debian/*.ex
+OBS/**/.osc/
+OBS/*/debian/*.ex
