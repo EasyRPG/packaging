@@ -1,0 +1,15 @@
+[submodule "AUR/liblcf"]
+	path = AUR/liblcf
+	url = https://aur.archlinux.org/liblcf.git
+[submodule "AUR/liblcf-git"]
+	path = AUR/liblcf-git
+	url = https://aur.archlinux.org/liblcf-git.git
+[submodule "AUR/easyrpg-player"]
+	path = AUR/easyrpg-player
+	url = https://aur.archlinux.org/easyrpg-player.git
+[submodule "AUR/easyrpg-player-git"]
+	path = AUR/easyrpg-player-git
+	url = https://aur.archlinux.org/easyrpg-player-git.git
+[submodule "AUR/easyrpg-tools-git"]
+	path = AUR/easyrpg-tools-git
+	url = https://aur.archlinux.org/easyrpg-tools-git.git
