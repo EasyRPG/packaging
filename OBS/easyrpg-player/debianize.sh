@@ -41,24 +41,3 @@ tar -cJf "${DEBTAR}" --exclude='*.ex' --exclude='*.bak' debian
 
 echo "Updating checksums..."
 add_checksums easyrpg-player.dsc
-
-OLDDEBVER=${DEBVER}
-DEBVER="${OLDDEBVER}old1804"
-DEBTAR="easyrpg-player_${DEBVER}.debian.tar.xz"
-COMPATDISTRO="xUbuntu_18.04"
-
-echo "Generating compat package (no mp3) for xUbuntu_18.04 Bionic"
-
-# disable mp3 support
-sed -e 's/, libmpg123-dev//' \
-  -e "s/${OLDDEBVER}/${DEBVER}/" \
-  easyrpg-player.dsc > "easyrpg-player-${COMPATDISTRO}.dsc"
-sed -i'.bak' 's/, libmpg123-dev//' debian/control
-
-echo "Creating ${DEBTAR}:"
-tar -cJf "${DEBTAR}" --exclude='*.ex' --exclude='*.bak' debian
-
-echo "Updating checksums..."
-add_checksums "easyrpg-player-${COMPATDISTRO}.dsc"
-
-mv debian/control.bak debian/control

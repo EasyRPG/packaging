@@ -1,3 +1,9 @@
+liblcf (0.8-1) unstable; urgency=low
+
+  * Upstream update
+
+ -- Ghabry <gabriel@ mastergk .de>  Tue, 30 May 2023 02:26:15 +0200
+
 liblcf (0.7.0-4) unstable; urgency=low
 
   * OBS rebuild

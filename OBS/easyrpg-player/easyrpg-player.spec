@@ -1,6 +1,6 @@
 
 Name:           easyrpg-player
-Version:        0.7.0
+Version:        0.8
 Release:        3%{?dist}
 Summary:        Game interpreter to play RPG Maker 2000, 2003 and EasyRPG games
 
@@ -8,8 +8,6 @@ Group:          Amusements/Games/RPG
 License:        GPL-3.0
 URL:            https://easyrpg.org
 Source0:        https://easyrpg.org/downloads/player/%{version}/%{name}-%{version}.tar.xz
-
-Patch0:         fix-alsa-conditional.patch
 
 BuildRequires:  gcc-c++
 BuildRequires:  libtool
@@ -48,7 +46,7 @@ to play all games created with them as the original game interpreter
 
 %prep
 %setup -q
-%patch0 -p1
+
 %ifarch ppc64le
 # disable powerpc intrinsics in c++ mode
 sed -i -e '/^AX_CXX_COMPILE_STDCXX/ s/noext/ext/' configure.ac
@@ -68,12 +66,19 @@ make %{?_smp_mflags}
 %else
 %license COPYING
 %endif
-%doc README.md AUTHORS.md
+%doc README.md docs/AUTHORS.md
 %{_bindir}/*
 %{_mandir}/man6/*
+%{_datadir}/applications/%{name}.desktop
 %{_datadir}/bash-completion/completions/*
+%{_datadir}/icons/hicolor
+%{_datadir}/metainfo/%{name}.metainfo.xml
+%{_datadir}/pixmaps/%{name}.png
 
 %changelog
+* Tue May 30 2023 Ghabry <gabriel@ mastergk .de> - 0.8-1
+- Upstream Update
+
 * Tue Jun 14 2022 carstene1ns <dev@ f4ke .de> - 0.7.0-3
 - OBS rebuild
 - Remove fedora support, leave only modern openSUSE
