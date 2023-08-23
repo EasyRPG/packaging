@@ -35,16 +35,16 @@ graph distributions {
 
 	node[color=green];
 	openSUSE;
-	s153 [label="Leap 15.3"];
 	s154 [label="Leap 15.4"];
 	st   [label="Tumbleweed"];
 
 	node[color=orange];
 	xUbuntu;
-	u1804 [label="18.04"];
 	u2004 [label="20.04"];
 	u2110 [label="21.10"];
 	u2204 [label="22.04"];
+	u2210 [label="22.10"];
+	u2304 [label="23.04"];
 
 	node[color=blue];
 	Arch;
@@ -64,22 +64,22 @@ graph distributions {
 	r11 -- armv7l;
 
 	edge[color=green];
-	s153 -- x86_64;
 	s154 -- x86_64;
 	st -- { x86_64 i586 };
 
 	edge[color=orange];
-	u1804 -- x86_64;
 	u2004 -- x86_64;
 	u2110 -- x86_64;
 	u2204 -- x86_64;
+	u2210 -- x86_64;
+	u2304 -- x86_64;
 
 	# order!
 
 	edge [style=dotted, color=gray];
 	Debian -- {d10 d11 dt du}
 	Raspbian -- {r10 r11}
-	openSUSE -- {s153 s154 st}
-	xUbuntu -- {u1804 u2004 u2110 u2204}
+	openSUSE -- {s154 st}
+	xUbuntu -- {u2004 u2110 u2204 u2210 u2304}
 }
 EOD

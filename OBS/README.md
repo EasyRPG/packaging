@@ -17,9 +17,6 @@ https://software.opensuse.org/download.html?project=home%3Aeasyrpg&package=easyr
 
 ![distributions-graph](distributions.png)
 
-
 ### Notes
-
-xUbuntu 18.04 is lacking MP3 support!
 
 Additional Architectures like ARM cannot be tested by us and are unsupported. We appreciate feedback. :)
