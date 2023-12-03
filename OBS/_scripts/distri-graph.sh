@@ -25,7 +25,7 @@ graph distributions {
 	Debian;
 	d10 [label="10"];
 	d11 [label="11"];
-	d11 [label="12"];
+	d12 [label="12"];
 	dt  [label="testing"];
 	du  [label="unstable"];
 
