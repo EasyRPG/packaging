@@ -25,6 +25,7 @@ graph distributions {
 	Debian;
 	d10 [label="10"];
 	d11 [label="11"];
+	d11 [label="12"];
 	dt  [label="testing"];
 	du  [label="unstable"];
 
@@ -32,6 +33,7 @@ graph distributions {
 	Raspbian;
 	r10 [label="10"];
 	r11 [label="11"];
+	r12 [label="12"];
 
 	node[color=green];
 	openSUSE;
@@ -45,6 +47,7 @@ graph distributions {
 	u2204 [label="22.04"];
 	u2210 [label="22.10"];
 	u2304 [label="23.04"];
+	u2310 [label="23.10"];
 
 	node[color=blue];
 	Arch;
@@ -56,12 +59,14 @@ graph distributions {
 	edge[color=red];
 	d10 -- { x86_64 i586 aarch64 };
 	d11 -- { x86_64 i586 };
+	d12 -- { x86_64 i586 };
 	dt -- x86_64;
 	du -- x86_64;
 
 	edge[color="#B3446C"];
 	r10 -- armv7l;
 	r11 -- armv7l;
+	r12 -- armv7l;
 
 	edge[color=green];
 	s154 -- x86_64;
@@ -73,13 +78,14 @@ graph distributions {
 	u2204 -- x86_64;
 	u2210 -- x86_64;
 	u2304 -- x86_64;
+	u2310 -- x86_64;
 
 	# order!
 
 	edge [style=dotted, color=gray];
-	Debian -- {d10 d11 dt du}
-	Raspbian -- {r10 r11}
+	Debian -- {d10 d11 d12 dt du}
+	Raspbian -- {r10 r11 r12}
 	openSUSE -- {s154 st}
-	xUbuntu -- {u2004 u2110 u2204 u2210 u2304}
+	xUbuntu -- {u2004 u2110 u2204 u2210 u2304 u2310}
 }
 EOD
