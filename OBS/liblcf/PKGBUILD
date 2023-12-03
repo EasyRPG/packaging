@@ -1,8 +1,8 @@
-# Maintainer: carstene1ns <arch carsten-teibes de> - http://git.io/ctPKG
+# Maintained here: https://aur.archlinux.org/packages/liblcf
 
 pkgname=liblcf
 pkgver=0.8
-pkgrel=1
+pkgrel=2
 pkgdesc="Library to handle RPG Maker 2000/2003 and EasyRPG projects"
 arch=('i686' 'x86_64')
 url="https://easyrpg.org"

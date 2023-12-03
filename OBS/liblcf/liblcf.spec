@@ -1,7 +1,7 @@
 
 Name:           liblcf
 Version:        0.8
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        RPG Maker 2000/2003 and EasyRPG game data library
 
 Group:          System/Libraries
@@ -12,11 +12,7 @@ Source0:        https://easyrpg.org/downloads/player/%{version}/%{name}-%{versio
 # Requires:       libicu
 # Requires:       libexpat1
 
-%if 0%{?suse_version}
 BuildRequires:  c++_compiler
-%else
-BuildRequires:  gcc-c++
-%endif
 BuildRequires:  libtool
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(icu-i18n)
@@ -76,12 +72,7 @@ rm %{buildroot}%{_libdir}/liblcf.la
 %postun -n liblcf0 -p /sbin/ldconfig
 
 %files -n liblcf0
-%if 0%{?suse_version}
-%doc COPYING
-%else
-%license COPYING
-%endif
-%doc README.md AUTHORS.md
+%doc COPYING README.md AUTHORS.md
 %{_libdir}/liblcf.so.*
 %{_datadir}/mime/packages/liblcf.xml
 
@@ -90,17 +81,16 @@ rm %{buildroot}%{_libdir}/liblcf.la
 %{_libdir}/liblcf.a
 %{_libdir}/liblcf.so
 %{_libdir}/pkgconfig/liblcf.pc
-%if 0%{?suse_version}
 %{_libdir}/cmake
-%else
-%{_libdir}/cmake/liblcf
-%endif
 
 %files -n liblcf0-tools
 %{_bindir}/lcf2xml
 %{_bindir}/lcfstrings
 
 %changelog
+* Sun Dec 03 2023 carstene1ns <dev@ f4ke .de> - 0.8-2
+- OBS rebuild
+
 * Tue May 30 2023 Ghabry <gabriel@ mastergk .de> - 0.8-1
 - Upstream Update
 
