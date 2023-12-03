@@ -1,7 +1,7 @@
 
 Name:           easyrpg-player
 Version:        0.8
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Game interpreter to play RPG Maker 2000, 2003 and EasyRPG games
 
 Group:          Amusements/Games/RPG
@@ -61,12 +61,7 @@ make %{?_smp_mflags}
 %make_install
 
 %files
-%if 0%{?suse_version}
-%doc COPYING
-%else
-%license COPYING
-%endif
-%doc README.md docs/AUTHORS.md
+%doc COPYING README.md docs/AUTHORS.md
 %{_bindir}/*
 %{_mandir}/man6/*
 %{_datadir}/applications/%{name}.desktop
@@ -76,7 +71,10 @@ make %{?_smp_mflags}
 %{_datadir}/pixmaps/%{name}.png
 
 %changelog
-* Tue May 30 2023 Ghabry <gabriel@ mastergk .de> - 0.8-1
+* Sun Dec 03 2023 carstene1ns <dev@ f4ke .de> - 0.8-4
+- OBS rebuild
+
+* Tue May 30 2023 Ghabry <gabriel@ mastergk .de> - 0.8-3
 - Upstream Update
 
 * Tue Jun 14 2022 carstene1ns <dev@ f4ke .de> - 0.7.0-3

@@ -2,7 +2,7 @@
 
 pkgname=easyrpg-player
 pkgver=0.8
-pkgrel=2
+pkgrel=3
 pkgdesc="FLOSS RPG Maker 2000/2003 and EasyRPG games interpreter"
 arch=('i686' 'x86_64')
 url="https://easyrpg.org"
