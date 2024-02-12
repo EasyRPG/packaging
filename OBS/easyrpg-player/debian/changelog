@@ -1,8 +1,9 @@
 easyrpg-player (0.8-2) unstable; urgency=low
 
   * OBS rebuild
+  * Update patches
 
- -- carstene1ns <dev@ f4ke .de>  Sun, 03 Dec 2023 20:34:27 +0100
+ -- carstene1ns <dev@ f4ke .de>  Tue, 13 Feb 2024 00:34:28 +0100
 
 easyrpg-player (0.8-1) unstable; urgency=low
 

@@ -1,13 +1,15 @@
 
 Name:           easyrpg-player
 Version:        0.8
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Game interpreter to play RPG Maker 2000, 2003 and EasyRPG games
 
 Group:          Amusements/Games/RPG
 License:        GPL-3.0
 URL:            https://easyrpg.org
 Source0:        https://easyrpg.org/downloads/player/%{version}/%{name}-%{version}.tar.xz
+
+Patch0:         %{name}-%{version}-fmt-string_view-api.patch
 
 BuildRequires:  gcc-c++
 BuildRequires:  libtool
@@ -46,7 +48,7 @@ to play all games created with them as the original game interpreter
 
 %prep
 %setup -q
-
+%patch0 -p1
 %ifarch ppc64le
 # disable powerpc intrinsics in c++ mode
 sed -i -e '/^AX_CXX_COMPILE_STDCXX/ s/noext/ext/' configure.ac
@@ -71,6 +73,9 @@ make %{?_smp_mflags}
 %{_datadir}/pixmaps/%{name}.png
 
 %changelog
+* Tue Feb 13 2024 carstene1ns <dev@ f4ke .de> - 0.8-5
+- Add fmt patch
+
 * Sun Dec 03 2023 carstene1ns <dev@ f4ke .de> - 0.8-4
 - OBS rebuild
 
