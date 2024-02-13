@@ -12,8 +12,9 @@ Source0:        https://easyrpg.org/downloads/player/%{version}/%{name}-%{versio
 # Requires:       libicu
 # Requires:       libexpat1
 
+BuildRequires:  cmake
+BuildRequires:  ninja
 BuildRequires:  c++_compiler
-BuildRequires:  libtool
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(icu-i18n)
 BuildRequires:  pkgconfig(expat)
@@ -53,19 +54,15 @@ They can read and write LCF and XML files.
 %setup -q
 
 %build
-#Tumbleweed hack
-%if 0%{?suse_version} > 1500
-export CXXFLAGS="%{build_cxxflags} -ffat-lto-objects"
-%endif
-%configure --disable-update-mimedb
-make %{?_smp_mflags}
-
-%check
-make check
+%define __builder ninja
+%cmake -DDISABLE_UPDATE_MIMEDB=ON
+%cmake_build
 
 %install
-%make_install
-rm %{buildroot}%{_libdir}/liblcf.la
+%cmake_install
+
+%check
+ninja -v %{?_smp_mflags} check -C %__builddir
 
 %post -n liblcf0 -p /sbin/ldconfig
 
@@ -78,7 +75,6 @@ rm %{buildroot}%{_libdir}/liblcf.la
 
 %files -n liblcf0-devel
 %{_includedir}/lcf
-%{_libdir}/liblcf.a
 %{_libdir}/liblcf.so
 %{_libdir}/pkgconfig/liblcf.pc
 %{_libdir}/cmake
@@ -90,6 +86,7 @@ rm %{buildroot}%{_libdir}/liblcf.la
 %changelog
 * Sun Dec 03 2023 carstene1ns <dev@ f4ke .de> - 0.8-2
 - OBS rebuild
+- Switch to CMake/Ninja
 
 * Tue May 30 2023 Ghabry <gabriel@ mastergk .de> - 0.8-1
 - Upstream Update

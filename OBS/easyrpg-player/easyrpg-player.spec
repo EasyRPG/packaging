@@ -11,8 +11,9 @@ Source0:        https://easyrpg.org/downloads/player/%{version}/%{name}-%{versio
 
 Patch0:         %{name}-%{version}-fmt-string_view-api.patch
 
-BuildRequires:  gcc-c++
-BuildRequires:  libtool
+BuildRequires:  cmake
+BuildRequires:  ninja
+BuildRequires:  c++_compiler
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(liblcf)
 BuildRequires:  pkgconfig(sdl2)
@@ -28,13 +29,11 @@ BuildRequires:  pkgconfig(sndfile)
 BuildRequires:  pkgconfig(libxmp)
 BuildRequires:  pkgconfig(bash-completion)
 BuildRequires:  pkgconfig(libpng16)
-BuildRequires:  pkgconfig(fluidsynth)
 BuildRequires:  pkgconfig(libmpg123)
-%if 0%{?suse_version} > 1500
-# tumbleweed needs this
-BuildRequires:  mpg123-devel
-%endif
-BuildRequires:  libpng16-compat-devel
+BuildRequires:  pkgconfig(fluidsynth)
+BuildRequires:  fluidsynth
+BuildRequires:  pkgconfig(tslib)
+BuildRequires:  pkgconfig(alsa)
 
 # currently not building source documentation
 #BuildRequires:  doxygen
@@ -48,19 +47,21 @@ to play all games created with them as the original game interpreter
 
 %prep
 %setup -q
+# only use fmt patch on thumbleweed
+%if 0%{?suse_version} > 1600
 %patch0 -p1
-%ifarch ppc64le
-# disable powerpc intrinsics in c++ mode
-sed -i -e '/^AX_CXX_COMPILE_STDCXX/ s/noext/ext/' configure.ac
-autoreconf -fi
 %endif
 
 %build
-%configure --enable-fmmidi --disable-maintainer-mode
-make %{?_smp_mflags}
+%define __builder ninja
+%cmake -DPLAYER_WITH_NATIVE_MIDI=OFF
+%cmake_build
 
 %install
-%make_install
+%cmake_install
+
+%check
+ninja -v %{?_smp_mflags} check -C %__builddir
 
 %files
 %doc COPYING README.md docs/AUTHORS.md
@@ -75,6 +76,7 @@ make %{?_smp_mflags}
 %changelog
 * Tue Feb 13 2024 carstene1ns <dev@ f4ke .de> - 0.8-5
 - Add fmt patch
+- Switch to CMake/Ninja
 
 * Sun Dec 03 2023 carstene1ns <dev@ f4ke .de> - 0.8-4
 - OBS rebuild
