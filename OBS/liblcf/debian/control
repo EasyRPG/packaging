@@ -1,7 +1,7 @@
 Source: liblcf
 Priority: optional
 Maintainer: carstene1ns <dev@ f4ke .de>
-Build-Depends: debhelper (>= 10), autotools-dev, libtool, pkg-config, libexpat-dev, libicu-dev, libinih-dev
+Build-Depends: debhelper (>= 11), cmake (>= 3.16), pkg-config, libexpat-dev, libicu-dev, libinih-dev
 Standards-Version: 4.6.0
 Section: libs
 Homepage: https://easyrpg.org/

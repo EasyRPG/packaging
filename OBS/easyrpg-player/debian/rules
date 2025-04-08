@@ -13,8 +13,7 @@
 #export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 %:
-	dh $@
+	dh $@ --buildsystem=cmake
 
-# additinal switch for FMMidi
 override_dh_auto_configure:
-	dh_auto_configure -- --enable-fmmidi --disable-maintainer-mode
+	dh_auto_configure -- -DPLAYER_WITH_NATIVE_MIDI=OFF
