@@ -1,15 +1,13 @@
 
 Name:           easyrpg-player
-Version:        0.8
-Release:        5%{?dist}
+Version:        0.8.1
+Release:        1%{?dist}
 Summary:        Game interpreter to play RPG Maker 2000, 2003 and EasyRPG games
 
 Group:          Amusements/Games/RPG
 License:        GPL-3.0
 URL:            https://easyrpg.org
 Source0:        https://easyrpg.org/downloads/player/%{version}/%{name}-%{version}.tar.xz
-
-Patch0:         %{name}-%{version}-fmt-string_view-api.patch
 
 BuildRequires:  cmake
 BuildRequires:  ninja
@@ -31,6 +29,7 @@ BuildRequires:  pkgconfig(bash-completion)
 BuildRequires:  pkgconfig(libpng16)
 BuildRequires:  pkgconfig(libmpg123)
 BuildRequires:  pkgconfig(fluidsynth)
+BuildRequires:  pkgconfig(liblhasa)
 BuildRequires:  fluidsynth
 BuildRequires:  pkgconfig(tslib)
 BuildRequires:  pkgconfig(alsa)
@@ -47,10 +46,6 @@ to play all games created with them as the original game interpreter
 
 %prep
 %setup -q
-# only use fmt patch on thumbleweed
-%if 0%{?suse_version} > 1600
-%patch0 -p1
-%endif
 
 %build
 %define __builder ninja
@@ -74,6 +69,9 @@ ninja -v %{?_smp_mflags} check -C %__builddir
 %{_datadir}/pixmaps/%{name}.png
 
 %changelog
+* Tue Apr 08 2025 carstene1ns <dev@ f4ke .de> - 0.8.1-1
+- Upstream Update
+
 * Tue Feb 13 2024 carstene1ns <dev@ f4ke .de> - 0.8-5
 - Add fmt patch
 - Switch to CMake/Ninja
