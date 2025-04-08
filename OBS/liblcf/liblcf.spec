@@ -1,7 +1,7 @@
 
 Name:           liblcf
-Version:        0.8
-Release:        2%{?dist}
+Version:        0.8.1
+Release:        1%{?dist}
 Summary:        RPG Maker 2000/2003 and EasyRPG game data library
 
 Group:          System/Libraries
@@ -11,6 +11,7 @@ Source0:        https://easyrpg.org/downloads/player/%{version}/%{name}-%{versio
 
 # Requires:       libicu
 # Requires:       libexpat1
+# Requires:       libinih
 
 BuildRequires:  cmake
 BuildRequires:  ninja
@@ -18,6 +19,7 @@ BuildRequires:  c++_compiler
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(icu-i18n)
 BuildRequires:  pkgconfig(expat)
+BuildRequires:  pkgconfig(inih)
 BuildRequires:  doxygen
 
 %description
@@ -55,7 +57,7 @@ They can read and write LCF and XML files.
 
 %build
 %define __builder ninja
-%cmake -DDISABLE_UPDATE_MIMEDB=ON
+%cmake -DLIBLCF_UPDATE_MIMEDB=OFF
 %cmake_build
 
 %install
@@ -84,6 +86,9 @@ ninja -v %{?_smp_mflags} check -C %__builddir
 %{_bindir}/lcfstrings
 
 %changelog
+* Tue Apr 08 2025 carstene1ns <dev@ f4ke .de> - 0.8.1-1
+- Upstream Update
+
 * Sun Dec 03 2023 carstene1ns <dev@ f4ke .de> - 0.8-2
 - OBS rebuild
 - Switch to CMake/Ninja
