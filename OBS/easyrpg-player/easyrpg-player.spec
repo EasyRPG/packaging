@@ -30,6 +30,8 @@ BuildRequires:  pkgconfig(libpng16)
 BuildRequires:  pkgconfig(libmpg123)
 BuildRequires:  pkgconfig(fluidsynth)
 BuildRequires:  pkgconfig(liblhasa)
+# fixme: inih is a lcf dep
+BuildRequires:  pkgconfig(inih)
 BuildRequires:  fluidsynth
 BuildRequires:  pkgconfig(tslib)
 BuildRequires:  pkgconfig(alsa)

@@ -1,7 +1,8 @@
 Source: liblcf
 Priority: optional
 Maintainer: carstene1ns <dev@ f4ke .de>
-Build-Depends: debhelper (>= 11), cmake (>= 3.16), pkg-config, libexpat-dev, libicu-dev, libinih-dev
+Build-Depends: debhelper (>= 11), cmake (>= 3.16), pkg-config,
+ libexpat-dev, libicu-dev, libinih-dev
 Standards-Version: 4.6.0
 Section: libs
 Homepage: https://easyrpg.org/
@@ -20,3 +21,8 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: RPG Maker 2000/2003 and EasyRPG game data library
  liblcf is a library to handle RPG Maker 2000/2003 and EasyRPG game data.
  It can read and write LCF and XML files.
+
+Package: lcf-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Tools to handle RPG Maker 2000/2003 and EasyRPG game data.

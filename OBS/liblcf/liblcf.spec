@@ -49,14 +49,13 @@ Requires:       liblcf0 = %{version}
 liblcf is a library to handle RPG Maker 2000/2003 and EasyRPG game data.
 It can read and write LCF and XML files.
 
-%package -n liblcf0-tools
+%package -n lcf-tools
 Summary:        RPG Maker 2000/2003 and EasyRPG game data library - tools
 Group:          Games and Entertainment
 Requires:       liblcf0 = %{version}
 
-%description -n liblcf0-tools
+%description -n lcf-tools
 Tools to handle RPG Maker 2000/2003 and EasyRPG game data.
-They can read and write LCF and XML files.
 
 %prep
 %setup -q
@@ -90,7 +89,7 @@ ninja -v %{?_smp_mflags} check -C %__builddir
 %{_libdir}/pkgconfig/liblcf.pc
 %{_libdir}/cmake
 
-%files -n liblcf0-tools
+%files -n lcf-tools
 %{_bindir}/lcf2xml
 %{_bindir}/lcfstrings
 
