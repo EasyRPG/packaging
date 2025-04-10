@@ -1,7 +1,7 @@
 
 Name:           liblcf
-Version:        0.8
-Release:        2%{?dist}
+Version:        0.8.1
+Release:        1%{?dist}
 Summary:        RPG Maker 2000/2003 and EasyRPG game data library
 
 Group:          System/Libraries
@@ -11,14 +11,22 @@ Source0:        https://easyrpg.org/downloads/player/%{version}/%{name}-%{versio
 
 # Requires:       libicu
 # Requires:       libexpat1
+# Requires:       libinih
 
 BuildRequires:  cmake
 BuildRequires:  ninja
+%if 0%{?sle_version} <= 150600 && 0%{?sle_version} >= 150500 && 0%{?is_opensuse}
+BuildRequires:  gcc10-c++
+%else
 BuildRequires:  c++_compiler
+%endif
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(icu-i18n)
 BuildRequires:  pkgconfig(expat)
-BuildRequires:  doxygen
+BuildRequires:  pkgconfig(inih)
+
+# currently not building source documentation
+#BuildRequires:  doxygen
 
 %description
 liblcf is a library to handle RPG Maker 2000/2003 and EasyRPG game data.
@@ -41,21 +49,23 @@ Requires:       liblcf0 = %{version}
 liblcf is a library to handle RPG Maker 2000/2003 and EasyRPG game data.
 It can read and write LCF and XML files.
 
-%package -n liblcf0-tools
+%package -n lcf-tools
 Summary:        RPG Maker 2000/2003 and EasyRPG game data library - tools
 Group:          Games and Entertainment
 Requires:       liblcf0 = %{version}
 
-%description -n liblcf0-tools
+%description -n lcf-tools
 Tools to handle RPG Maker 2000/2003 and EasyRPG game data.
-They can read and write LCF and XML files.
 
 %prep
 %setup -q
 
 %build
 %define __builder ninja
-%cmake -DDISABLE_UPDATE_MIMEDB=ON
+%if 0%{?sle_version} <= 150600 && 0%{?sle_version} >= 150500 && 0%{?is_opensuse}
+export CXX=/usr/bin/g++-10
+%endif
+%cmake -DLIBLCF_UPDATE_MIMEDB=OFF
 %cmake_build
 
 %install
@@ -79,11 +89,14 @@ ninja -v %{?_smp_mflags} check -C %__builddir
 %{_libdir}/pkgconfig/liblcf.pc
 %{_libdir}/cmake
 
-%files -n liblcf0-tools
+%files -n lcf-tools
 %{_bindir}/lcf2xml
 %{_bindir}/lcfstrings
 
 %changelog
+* Tue Apr 08 2025 carstene1ns <dev@ f4ke .de> - 0.8.1-1
+- Upstream Update
+
 * Sun Dec 03 2023 carstene1ns <dev@ f4ke .de> - 0.8-2
 - OBS rebuild
 - Switch to CMake/Ninja
