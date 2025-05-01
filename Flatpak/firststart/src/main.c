@@ -81,7 +81,7 @@ int main(int argc, char* argv[]) {
 		char *startupdir = gtk_file_chooser_get_filename(dirchooser);
 		if(startupdir != NULL) {
 			fputs("# Startup directory (for game browser)\n", file);
-			fprintf(file, "RPG_GAME_PATH=%s\n", startupdir);
+			fprintf(file, "RPG_GAME_PATH=\"%s\"\n", startupdir);
 			g_free(startupdir);
 		}
 
