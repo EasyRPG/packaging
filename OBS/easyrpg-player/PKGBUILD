@@ -10,14 +10,11 @@ license=('GPL-3.0-or-later')
 makedepends=('cmake' 'ninja' 'nlohmann-json')
 depends=("liblcf>=$pkgver" 'sdl2' 'libpng' 'pixman' 'fmt' 'freetype2' 'harfbuzz'
          'mpg123' 'libsndfile' 'libvorbis' 'opusfile' 'speexdsp' 'lhasa'
-         'hicolor-icon-theme')
+         'hicolor-icon-theme' 'fluidsynth' 'libxmp')
 optdepends=('alsa-lib: native MIDI playback (needs sequencer)'
             'wildmidi: decoder for MIDI (needs "GUS patches")'
-            'fluidsynth: better MIDI decoder (needs soundfont)'
-            'libxmp: decoder for tracker music, used by few games'
-            'rpg2000-rtp: run time package for some 2k games'
-            'rpg2003-rtp: run time package for some 2k3 games'
-            'wine: for installing run time packages (RTP) manually')
+            'rpg2000-rtp: For some 2k games'
+            'rpg2003-rtp: For some 2k3 games')
 install=$pkgname.install
 source=("https://easyrpg.org/downloads/player/$pkgver/$pkgname-$pkgver.tar.xz")
 sha256sums=('51249fbc8da4e3ac2e8371b0d6f9f32ff260096f5478b3b95020e27b031dbd0d')
