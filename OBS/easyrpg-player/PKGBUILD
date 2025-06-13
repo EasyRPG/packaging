@@ -14,7 +14,8 @@ depends=("liblcf>=$pkgver" 'sdl2' 'libpng' 'pixman' 'fmt' 'freetype2' 'harfbuzz'
 optdepends=('alsa-lib: native MIDI playback (needs sequencer)'
             'wildmidi: decoder for MIDI (needs "GUS patches")'
             'rpg2000-rtp: For some 2k games'
-            'rpg2003-rtp: For some 2k3 games')
+            'rpg2003-rtp: For some 2k3 games'
+            'wine: Load run time packages from wine prefix')
 install=$pkgname.install
 source=("https://easyrpg.org/downloads/player/$pkgver/$pkgname-$pkgver.tar.xz")
 sha256sums=('51249fbc8da4e3ac2e8371b0d6f9f32ff260096f5478b3b95020e27b031dbd0d')
