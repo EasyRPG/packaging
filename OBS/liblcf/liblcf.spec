@@ -1,7 +1,7 @@
 
 Name:           liblcf
 Version:        0.8.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        RPG Maker 2000/2003 and EasyRPG game data library
 
 Group:          System/Libraries
@@ -9,13 +9,9 @@ License:        MIT
 URL:            https://easyrpg.org
 Source0:        https://easyrpg.org/downloads/player/%{version}/%{name}-%{version}.tar.xz
 
-# Requires:       libicu
-# Requires:       libexpat1
-# Requires:       libinih
-
 BuildRequires:  cmake
 BuildRequires:  ninja
-%if 0%{?sle_version} <= 150600 && 0%{?sle_version} >= 150500 && 0%{?is_opensuse}
+%if 0%{?sle_version} == 150600 && 0%{?is_opensuse}
 BuildRequires:  gcc10-c++
 %else
 BuildRequires:  c++_compiler
@@ -35,6 +31,9 @@ It can read and write LCF and XML files.
 %package -n liblcf0
 Summary:        RPG Maker 2000/2003 and EasyRPG game data library
 Group:          System/Libraries
+#Requires:       libicu77
+#Requires:       libexpat1
+#Requires:       libinih0
 
 %description -n liblcf0
 liblcf is a library to handle RPG Maker 2000/2003 and EasyRPG game data.
@@ -44,6 +43,7 @@ It can read and write LCF and XML files.
 Summary:        RPG Maker 2000/2003 and EasyRPG game data library - development files
 Group:          Development/Libraries/C and C++
 Requires:       liblcf0 = %{version}
+Requires:       libinih-devel
 
 %description -n liblcf0-devel
 liblcf is a library to handle RPG Maker 2000/2003 and EasyRPG game data.
@@ -62,7 +62,7 @@ Tools to handle RPG Maker 2000/2003 and EasyRPG game data.
 
 %build
 %define __builder ninja
-%if 0%{?sle_version} <= 150600 && 0%{?sle_version} >= 150500 && 0%{?is_opensuse}
+%if 0%{?sle_version} == 150600 && 0%{?is_opensuse}
 export CXX=/usr/bin/g++-10
 %endif
 %cmake -DLIBLCF_UPDATE_MIMEDB=OFF
