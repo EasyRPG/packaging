@@ -1,6 +1,6 @@
 
 Name:           easyrpg-player
-Version:        0.8.1
+Version:        0.8.1.1
 Release:        1%{?dist}
 Summary:        Game interpreter to play RPG Maker 2000, 2003 and EasyRPG games
 
@@ -30,8 +30,6 @@ BuildRequires:  pkgconfig(libpng16)
 BuildRequires:  pkgconfig(libmpg123)
 BuildRequires:  pkgconfig(fluidsynth)
 BuildRequires:  pkgconfig(liblhasa)
-# fixme: inih is a lcf dep
-BuildRequires:  pkgconfig(inih)
 BuildRequires:  fluidsynth
 BuildRequires:  pkgconfig(tslib)
 BuildRequires:  pkgconfig(alsa)
@@ -71,6 +69,9 @@ ninja -v %{?_smp_mflags} check -C %__builddir
 %{_datadir}/pixmaps/%{name}.png
 
 %changelog
+* Sun Jun 15 2025 carstene1ns <dev@ f4ke .de> - 0.8.1.1-1
+- Upstream update
+
 * Tue Apr 08 2025 carstene1ns <dev@ f4ke .de> - 0.8.1-1
 - Upstream Update
 
