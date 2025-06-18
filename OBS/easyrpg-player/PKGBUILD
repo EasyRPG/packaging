@@ -25,7 +25,7 @@ sha256sums=('51249fbc8da4e3ac2e8371b0d6f9f32ff260096f5478b3b95020e27b031dbd0d')
 prepare() {
   rm -rf aurbuild
 }
-
+export LDFLAGS=${LDFLAGS//-fuse-ld=mold}
 build() {
   cmake -S $pkgname-$pkgver -B aurbuild -G Ninja \
     -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr \
