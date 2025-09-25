@@ -1,7 +1,7 @@
 
 Name:           easyrpg-player
 Version:        0.8.1.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Game interpreter to play RPG Maker 2000, 2003 and EasyRPG games
 
 Group:          Amusements/Games/RPG
@@ -69,6 +69,9 @@ ninja -v %{?_smp_mflags} check -C %__builddir
 %{_datadir}/pixmaps/%{name}.png
 
 %changelog
+* Thu Sep 25 2025 carstene1ns <dev@ f4ke .de> - 0.8.1.1-2
+- OBS rebuild
+
 * Sun Jun 15 2025 carstene1ns <dev@ f4ke .de> - 0.8.1.1-1
 - Upstream update
 

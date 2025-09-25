@@ -5,8 +5,7 @@ Maintainer: carstene1ns <dev@ f4ke .de>
 Build-Depends: debhelper (>= 11), cmake (>= 3.18), pkg-config, liblcf-dev,
  libsdl2-dev, libfmt-dev, libpixman-1-dev, libpng-dev, libfreetype6-dev,
  libharfbuzz-dev, libogg-dev, libvorbis-dev, libspeexdsp-dev, libsndfile-dev,
- libopusfile-dev, libmpg123-dev, libfluidsynth-dev, fluidsynth, liblhasa-dev,
- libinih-dev
+ libopusfile-dev, libmpg123-dev, libfluidsynth-dev, fluidsynth, liblhasa-dev
 Standards-Version: 4.6.0
 Homepage: https://easyrpg.org
 
