@@ -1,2 +1,3 @@
 OBS/**/.osc/
-OBS/*/debian/*.ex
+OBS/*/debian.tar
+OBS/*/debian.tar.*

@@ -94,6 +94,9 @@ ninja -v %{?_smp_mflags} check -C %__builddir
 %{_bindir}/lcfstrings
 
 %changelog
+* Thu Sep 25 2025 carstene1ns <dev@ f4ke .de> - 0.8.1-2
+- OBS rebuild
+
 * Tue Apr 08 2025 carstene1ns <dev@ f4ke .de> - 0.8.1-1
 - Upstream Update
 

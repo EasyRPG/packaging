@@ -19,7 +19,7 @@ perl -pi -e 's/^(Version.*)-(\d+)$/$1.-($2+1)/e' $project.dsc
 
 $SCRIPT_DIR/add_changelog.sh "OBS rebuild"
 
-./debianize.sh
+$SCRIPT_DIR/debianize.sh
 
 # PKGBUILD
 perl -pi -e 's/^(pkgrel=)(\d+)$/$1.($2+1)/e' PKGBUILD
