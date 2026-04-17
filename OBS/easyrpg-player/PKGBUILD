@@ -2,7 +2,7 @@
 
 pkgname=easyrpg-player
 pkgver=0.8.1.1
-pkgrel=1
+pkgrel=4
 pkgdesc="FLOSS RPG Maker 2000/2003 and EasyRPG games interpreter"
 arch=('x86_64')
 url="https://easyrpg.org"
@@ -10,10 +10,9 @@ license=('GPL-3.0-or-later')
 makedepends=('cmake' 'ninja' 'nlohmann-json')
 depends=("liblcf>=${pkgver:0:5}" 'sdl2' 'libpng' 'pixman' 'fmt' 'freetype2' 'harfbuzz'
          'mpg123' 'libsndfile' 'libvorbis' 'opusfile' 'speexdsp' 'lhasa'
-         'hicolor-icon-theme')
+         'hicolor-icon-theme' 'fluidsynth')
 optdepends=('alsa-lib: native MIDI playback (needs sequencer)'
             'wildmidi: decoder for MIDI (needs "GUS patches")'
-            'fluidsynth: better MIDI decoder (needs soundfont)'
             'libxmp: decoder for tracker music, used by few games'
             'rpg2000-rtp: run time package for some 2k games'
             'rpg2003-rtp: run time package for some 2k3 games'
@@ -40,3 +39,7 @@ check() {
 package() {
   DESTDIR="$pkgdir" cmake --install aurbuild
 }
+
+# makepkg config
+PACKAGER="EasyRPG team <easyrpg_at_easyrpg_dot_org>"
+MAKEFLAGS="-j${JOBS:-2}"

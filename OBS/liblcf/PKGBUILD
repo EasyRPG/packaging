@@ -2,7 +2,7 @@
 
 pkgname=liblcf
 pkgver=0.8.1
-pkgrel=1
+pkgrel=3
 pkgdesc="Library to handle RPG Maker 2000/2003 and EasyRPG projects"
 arch=('x86_64')
 url="https://easyrpg.org"
@@ -33,3 +33,7 @@ package() {
   # license
   install -Dm644 liblcf-$pkgver/COPYING "$pkgdir"/usr/share/licenses/$pkgname/COPYING
 }
+
+# makepkg config
+PACKAGER="EasyRPG team <easyrpg_at_easyrpg_dot_org>"
+MAKEFLAGS="-j${JOBS:-2}"

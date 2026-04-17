@@ -1,7 +1,7 @@
 
 Name:           liblcf
 Version:        0.8.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        RPG Maker 2000/2003 and EasyRPG game data library
 
 Group:          System/Libraries
@@ -94,6 +94,9 @@ ninja -v %{?_smp_mflags} check -C %__builddir
 %{_bindir}/lcfstrings
 
 %changelog
+* Fri Apr 17 2026 carstene1ns <dev@ f4ke .de> - 0.8.1-3
+- OBS rebuild
+
 * Thu Sep 25 2025 carstene1ns <dev@ f4ke .de> - 0.8.1-2
 - OBS rebuild
 

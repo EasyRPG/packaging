@@ -2,8 +2,8 @@ Format: 3.0 (quilt)
 Source: easyrpg-player
 Binary: easyrpg-player
 Architecture: any
-Version: 0.8.1.1-2
-Maintainer: carstene1ns <dev@ f4ke .de>
+Version: 0.8.1.1-3
+Maintainer: EasyRPG Team <easyrpg@easyrpg.org>
 Homepage: https://easyrpg.org
 Standards-Version: 4.6.0
 Build-Depends: debhelper (>= 11), cmake (>= 3.16), pkg-config, liblcf-dev,
